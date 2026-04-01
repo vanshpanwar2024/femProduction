@@ -25,7 +25,7 @@ export default async function RootLayout({
   return (
     <html lang="en" className="dark scroll-smooth">
       <body className={`${inter.className} bg-zinc-950 text-neutral-50 min-h-screen flex flex-col antialiased`}>
-        <Navbar isAuthenticated={isAuthenticated} />
+        <Navbar isAuthenticated={isAuthenticated} user={user as any} />
         <main className="flex-1">{children}</main>
         <footer className="w-full text-center py-6 text-sm text-zinc-500 border-t border-zinc-900 mt-20">
           © {new Date().getFullYear()} VogueEvents. Dark Aesthetic Fashion.
