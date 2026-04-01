@@ -85,6 +85,13 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
                     </div>
                     <div className="py-2">
                       <Link 
+                        href="/register" 
+                        onClick={() => setIsDropdownOpen(false)}
+                        className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
+                      >
+                        Register
+                      </Link>
+                      <Link 
                         href="/profile" 
                         onClick={() => setIsDropdownOpen(false)}
                         className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
