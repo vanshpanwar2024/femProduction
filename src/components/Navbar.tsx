@@ -47,8 +47,8 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center text-white">
-        <Link href="/" className="text-2xl font-bold tracking-widest uppercase text-white hover:text-gray-300 transition-colors">
-          VogueEvents
+        <Link href="/" className="text-2xl font-bold tracking-widest uppercase text-white hover:text-[#D4A435] transition-colors">
+          FEM PRODUCTION
         </Link>
         <div className="hidden md:flex flex-1 justify-end space-x-8 text-sm font-medium tracking-wide items-center">
           <Link href="/" className={`hover:text-gray-400 transition-colors ${pathname === "/" ? "text-white" : "text-gray-300"}`}>Home</Link>
