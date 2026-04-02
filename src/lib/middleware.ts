@@ -15,7 +15,7 @@ export async function proxy(request: NextRequest) {
   const user = session ? await decrypt(session) : null;
 
   if (isProtectedRoute && !user) {
-    return NextResponse.redirect(new URL('/login', request.nextUrl));
+    return NextResponse.redirect(new URL('/', request.nextUrl));
   }
 
   if (isPublicRoute && user && path === '/login') {

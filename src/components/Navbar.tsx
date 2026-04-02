@@ -36,7 +36,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
 
   const handleLogout = async () => {
     await fetch('/api/auth/logout', { method: 'POST' });
-    router.push('/login');
+    router.push('/');
     router.refresh();
   };
 
@@ -58,6 +58,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
           <Link href="/gallery" className={`hover:text-gray-400 transition-colors ${pathname === "/gallery" ? "text-white" : "text-gray-300"}`}>Gallery</Link>
           <Link href="/events" className={`hover:text-gray-400 transition-colors ${pathname === "/events" ? "text-white" : "text-gray-300"}`}>Upcoming Events</Link>
           
+          {!pathname.startsWith("/admin") && (
           <div className="pl-6 border-l border-zinc-700 space-x-6 flex items-center">
             {isAuthenticated ? (
               <div className="relative" ref={dropdownRef}>
@@ -122,6 +123,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
               </button>
             )}
           </div>
+          )}
         </div>
       </div>
 

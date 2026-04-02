@@ -95,14 +95,39 @@ export default async function ProfilePage() {
       <div className="w-full md:w-6/12 lg:w-5/12 mt-8 md:mt-0 ml-auto">
         <div className="max-w-[400px] w-full ml-auto space-y-8 bg-transparent p-0 relative z-10">
         <div className="space-y-3">
-          <div className="uppercase inline-block mb-2 border border-[#D4A435] text-[#D4A435] text-[10px] tracking-[2px] px-2 py-0.5">
-            Sign Up
+          <div className={`uppercase inline-block mb-2 border text-[10px] tracking-[2px] px-2 py-0.5 ${
+            existingProfile?.status === 'approved' ? 'border-green-500 text-green-500' :
+            existingProfile?.status === 'declined' ? 'border-red-500 text-red-500' :
+            'border-[#D4A435] text-[#D4A435]'
+          }`}>
+            {existingProfile?.status === 'approved' ? "Approved" : 
+             existingProfile?.status === 'declined' ? "Declined" : 
+             existingProfile ? "Under Review" : "Sign Up"}
           </div>
           <h1 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-white leading-tight">
-            {existingProfile ? "Registration Submitted" : "Complete Registration"}
+            {existingProfile?.status === 'approved' ? "Congratulations!" : 
+             existingProfile?.status === 'declined' ? "We're Sorry" : 
+             existingProfile ? "Registration Submitted" : "Complete Registration"}
           </h1>
-          <div className="w-16 h-[1px] bg-[#D4A435] opacity-50"></div>
-          {existingProfile ? (
+          <div className={`w-16 h-[1px] opacity-50 ${
+            existingProfile?.status === 'approved' ? 'bg-green-500' :
+            existingProfile?.status === 'declined' ? 'bg-red-500' :
+            'bg-[#D4A435]'
+          }`}></div>
+          
+          {existingProfile?.status === 'approved' ? (
+            <div className="mt-4 p-4 bg-green-500/10 border border-green-500/50">
+              <p className="text-green-400 text-[13px] md:text-sm tracking-wide font-medium leading-relaxed">
+                Your profile has been approved! We are excited to welcome you to FEM PRODUCTION. Our team will be in touch with you shortly.
+              </p>
+            </div>
+          ) : existingProfile?.status === 'declined' ? (
+            <div className="mt-4 p-4 bg-red-500/10 border border-red-500/50">
+              <p className="text-red-400 text-[13px] md:text-sm tracking-wide font-medium leading-relaxed">
+                Unfortunately, your profile has been declined at this time. Thank you for your interest and we wish you the best in your future endeavors.
+              </p>
+            </div>
+          ) : existingProfile ? (
             <div className="mt-4 p-3 bg-[#D4A435]/10 border border-[#D4A435]/50">
               <p className="text-[#D4A435] text-[11px] md:text-xs tracking-wide">
                 Thanks for registering! Our experts are currently reviewing your profile.
