@@ -30,10 +30,6 @@ export default async function AdminPage() {
       .select('*')
       .order('updated_at', { ascending: false });
     
-    if (error) {
-      console.error('Admin profile fetch error:', error);
-    }
-    
     if (data) {
       profiles = data;
     }

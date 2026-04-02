@@ -28,7 +28,6 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
         alert(errorData.error || "Failed to update status");
       }
     } catch (error) {
-      console.error(error);
       alert("Failed to update status. Please make sure a 'status' column exists in your profiles table.");
     } finally {
       setLoadingId(null);
