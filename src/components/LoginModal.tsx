@@ -1,10 +1,14 @@
 "use client";
 
-import { Suspense } from "react";
 import { useState, useEffect } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-function AuthComponent() {
+interface LoginModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const [isLogin, setIsLogin] = useState(true);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -14,13 +18,22 @@ function AuthComponent() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  // Handle escape key
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
   // Pick up error parameters bound from OAuth failure redirects
   useEffect(() => {
     const errorParam = searchParams.get("error");
-    if (errorParam) {
+    if (errorParam && isOpen) {
       setError(decodeURIComponent(errorParam));
     }
-  }, [searchParams]);
+  }, [searchParams, isOpen]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -45,6 +58,7 @@ function AuthComponent() {
         throw new Error(data.error || "Authentication failed");
       }
 
+      onClose(); // Close the modal on success
       router.push("/dashboard");
       router.refresh(); // Refresh layout to update Navbar state
     } catch (err: any) {
@@ -61,15 +75,32 @@ function AuthComponent() {
     setPassword("");
   };
 
+  if (!isOpen) return null;
+
   return (
-    <div className="pt-32 pb-20 px-6 min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md p-8 md:p-12 bg-zinc-900 border border-zinc-800 space-y-8 shadow-2xl">
+    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+      <div 
+        className="absolute inset-0 z-[101]" 
+        onClick={onClose}
+      />
+      
+      <div className="w-full max-w-md p-8 md:p-12 bg-zinc-950 border border-[#D4A435]/30 space-y-8 shadow-2xl relative z-[102] animate-in fade-in zoom-in-95 duration-200">
         
+        {/* Close button */}
+        <button 
+          onClick={onClose}
+          className="absolute top-4 right-4 text-zinc-500 hover:text-white transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+
         <div className="flex w-full border-b border-zinc-800 mb-8">
           <button
             onClick={() => setIsLogin(true)}
             className={`flex-1 pb-4 text-sm font-medium tracking-widest uppercase transition-colors ${
-              isLogin ? "text-white border-b-2 border-white" : "text-zinc-500 hover:text-zinc-300"
+              isLogin ? "text-[#D4A435] border-b-2 border-[#D4A435]" : "text-zinc-500 hover:text-zinc-300"
             }`}
           >
             Login
@@ -77,7 +108,7 @@ function AuthComponent() {
           <button
             onClick={() => setIsLogin(false)}
             className={`flex-1 pb-4 text-sm font-medium tracking-widest uppercase transition-colors ${
-              !isLogin ? "text-white border-b-2 border-white" : "text-zinc-500 hover:text-zinc-300"
+              !isLogin ? "text-[#D4A435] border-b-2 border-[#D4A435]" : "text-zinc-500 hover:text-zinc-300"
             }`}
           >
             Signup
@@ -85,10 +116,10 @@ function AuthComponent() {
         </div>
 
         <div className="text-center space-y-2">
-          <h1 className="text-3xl font-light tracking-widest uppercase text-white">
+          <h1 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-white">
             {isLogin ? "Welcome Back" : "Join Us"}
           </h1>
-          <p className="text-zinc-500 text-sm">
+          <p className="text-[#D4A435] text-xs">
             {isLogin ? "Sign in to access your account" : "Create an account to RSVP"}
           </p>
         </div>
@@ -102,13 +133,13 @@ function AuthComponent() {
         <form onSubmit={handleSubmit} className="space-y-6">
           {!isLogin && (
             <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-              <label className="text-xs uppercase tracking-widest text-zinc-400" htmlFor="name">Full Name</label>
+              <label className="text-[10px] uppercase tracking-[3px] text-[#D4A435]" htmlFor="name">Full Name</label>
               <input
                 id="name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-zinc-500 transition-colors"
+                className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435]/50 transition-colors"
                 placeholder="Jane Doe"
                 required={!isLogin}
               />
@@ -116,36 +147,36 @@ function AuthComponent() {
           )}
 
           <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <label className="text-xs uppercase tracking-widest text-zinc-400" htmlFor="email">Email address</label>
+            <label className="text-[10px] uppercase tracking-[3px] text-[#D4A435]" htmlFor="email">Email address</label>
             <input
               id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-zinc-500 transition-colors"
+              className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435]/50 transition-colors"
               placeholder="user@example.com"
               required
             />
           </div>
 
           <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <label className="text-xs uppercase tracking-widest text-zinc-400" htmlFor="password">Password</label>
+            <label className="text-[10px] uppercase tracking-[3px] text-[#D4A435]" htmlFor="password">Password</label>
             <input
               id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-zinc-500 transition-colors"
+              className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435]/50 transition-colors"
               placeholder="••••••••"
               required
             />
-            <p className="text-zinc-600 text-xs mt-1">Must be at least 6 characters.</p>
+            <p className="text-zinc-500 text-[10px] uppercase mt-1 tracking-widest">Must be at least 6 characters.</p>
           </div>
 
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-white text-black py-4 uppercase tracking-widest text-sm font-medium hover:bg-zinc-200 transition-colors disabled:opacity-50 mt-4"
+            className="w-full bg-white text-black py-4 uppercase tracking-widest text-sm font-medium hover:bg-[#D4A435] hover:text-white transition-colors disabled:opacity-50 mt-4"
           >
             {isLoading ? "Processing..." : (isLogin ? "Enter" : "Create Account")}
           </button>
@@ -154,16 +185,16 @@ function AuthComponent() {
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-zinc-800"></div>
             </div>
-            <div className="relative bg-zinc-900 px-4 text-xs uppercase tracking-widest text-zinc-500">
+            <div className="relative bg-zinc-950 px-4 text-[10px] uppercase tracking-[3px] text-zinc-500">
               Or continue with
             </div>
           </div>
 
           <a
             href="/api/auth/google"
-            className="flex items-center justify-center w-full bg-zinc-950 border border-zinc-700 text-white py-4 uppercase tracking-widest text-sm font-medium hover:bg-zinc-800 hover:border-zinc-600 transition-all duration-300"
+            className="flex items-center justify-center w-full bg-black border border-zinc-800 text-white py-4 uppercase tracking-widest text-sm font-medium hover:bg-zinc-900 transition-all duration-300"
           >
-            <svg viewBox="0 0 24 24" className="h-5 w-5 mr-3" fill="currentColor">
+            <svg viewBox="0 0 24 24" className="h-4 w-4 mr-3" fill="currentColor">
               <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
               <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
               <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
@@ -177,20 +208,12 @@ function AuthComponent() {
           <button 
             type="button" 
             onClick={toggleAuthMode}
-            className="text-xs text-zinc-500 hover:text-white uppercase tracking-widest transition-colors pb-1 border-b border-transparent hover:border-zinc-500"
+            className="text-[10px] text-zinc-500 hover:text-[#D4A435] uppercase tracking-[2px] transition-colors pb-1 border-b border-transparent hover:border-[#D4A435]"
           >
             {isLogin ? "Don't have an account? Sign up" : "Already have an account? Log in"}
           </button>
         </div>
       </div>
     </div>
-  );
-}
-
-export default function AuthPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen pt-32 text-center text-zinc-500 uppercase tracking-widest">Loading...</div>}>
-      <AuthComponent />
-    </Suspense>
   );
 }

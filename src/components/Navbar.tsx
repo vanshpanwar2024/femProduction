@@ -4,10 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
+import LoginModal from "./LoginModal";
 
 export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: boolean; user?: any }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const pathname = usePathname();
@@ -112,13 +114,21 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
                 )}
               </div>
             ) : (
-              <Link href="/login" className="text-zinc-400 hover:text-white transition-colors uppercase text-xs tracking-widest border border-zinc-700 px-4 py-2 hover:bg-white hover:text-black">
+              <button 
+                onClick={() => setIsLoginModalOpen(true)} 
+                className="text-zinc-400 hover:text-white transition-colors uppercase text-xs tracking-widest border border-zinc-700 px-4 py-2 hover:bg-white hover:text-black cursor-pointer"
+              >
                 Login / Signup
-              </Link>
+              </button>
             )}
           </div>
         </div>
       </div>
+
+      <LoginModal 
+        isOpen={isLoginModalOpen} 
+        onClose={() => setIsLoginModalOpen(false)} 
+      />
     </nav>
   );
 }
