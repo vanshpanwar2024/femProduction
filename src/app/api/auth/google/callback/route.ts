@@ -87,8 +87,8 @@ export async function GET(request: Request) {
       maxAge: 60 * 60 * 24, // 1 day
     });
 
-    // 6. Redirect to dashboard successfully
-    return NextResponse.redirect(new URL('/dashboard', request.url));
+    // 6. Redirect to home successfully
+    return NextResponse.redirect(new URL('/', request.url));
   } catch (error) {
     console.error('OAuth Callback Error:', error);
     return NextResponse.redirect(new URL('/login?error=Internal server error during Google OAuth setup', request.url));

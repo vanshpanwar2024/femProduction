@@ -31,8 +31,64 @@ export default async function ProfilePage() {
     <div className="pt-32 pb-20 px-6 min-h-screen relative z-10 overflow-hidden max-w-7xl mx-auto flex flex-col md:flex-row gap-12 lg:gap-20">
       
       {/* Left Text Space */}
-      <div className="w-full md:w-6/12 lg:w-7/12 pt-0 md:pt-12">
-        {/* ADD YOUR TEXT HERE */}
+      <div className="w-full md:w-6/12 lg:w-7/12 pt-0 md:pt-4 md:pr-10 lg:pr-16 flex flex-col justify-center">
+        <h2 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-white leading-tight mb-4">
+          Talented Artists, <br className="hidden md:block"/>
+          <span className="text-[#D4A435]">Diverse Categories</span>
+        </h2>
+        <div className="w-20 h-[1px] bg-[#D4A435] opacity-50 mb-8"></div>
+        
+        <div className="space-y-6 pb-4">
+          
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
+            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Dancers</h3>
+            <h4 className="text-white text-sm md:text-base font-light tracking-wide">Elevate Your Dance Skills</h4>
+            <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
+              At Fem House, we provide a dedicated platform for dancers to showcase their artistry. Join our vibrant community of dancers and immerse yourself in an environment that celebrates your passion. Compete, learn, and grow with constructive feedback and mentorship from experienced judges.
+            </p>
+          </div>
+
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
+            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Actors</h3>
+            <h4 className="text-white text-sm md:text-base font-light tracking-wide">Unleash Your Acting Potential</h4>
+            <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
+              For aspiring actors, Fem House is your stage to shine. Explore your acting talents, audition in front of seasoned judges, and receive valuable feedback to refine your craft. We believe in nurturing your potential through mentorship and training, both online and offline.
+            </p>
+          </div>
+
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
+            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Singers</h3>
+            <h4 className="text-white text-sm md:text-base font-light tracking-wide">Harmonize Your Voice with Excellence</h4>
+            <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
+              At Fem House, we recognize the power of the human voice. Singers of all genres and styles are welcomed to participate and showcase their vocal prowess. Compete in a supportive environment, receive expert feedback, and access mentorship to fine-tune your singing skills.
+            </p>
+          </div>
+
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
+            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Comedians</h3>
+            <h4 className="text-white text-sm md:text-base font-light tracking-wide">Spread Laughter and Comedy Brilliance</h4>
+            <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
+              Comedy is an art, and at Fem House, we celebrate the brilliance of comedians. Join our community of funny and witty minds, perform your best routines, and compete for recognition. Our experienced judges provide valuable insights to enhance your comedic timing and delivery.
+            </p>
+          </div>
+
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
+            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Rappers</h3>
+            <h4 className="text-white text-sm md:text-base font-light tracking-wide">Rap with Passion and Precision</h4>
+            <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
+              Rap is a form of lyrical artistry, and at Fem House, we provide a stage for passionate rappers to showcase their skills. Participate in rap battles, impress judges with your lyrical prowess, and receive constructive feedback to elevate your craft.
+            </p>
+          </div>
+
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
+            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Models</h3>
+            <h4 className="text-white text-sm md:text-base font-light tracking-wide">Strut Your Style on the Runway</h4>
+            <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
+               For aspiring models, Fem House is the runway to strut your style and grace. Showcase your modeling talent, compete with confidence, and receive expert guidance to enhance your modeling skills. Join us and make your presence felt on the glamorous stage.
+            </p>
+          </div>
+          
+        </div>
       </div>
 
       {/* Right Form Box */}

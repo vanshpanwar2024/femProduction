@@ -19,7 +19,7 @@ export async function proxy(request: NextRequest) {
   }
 
   if (isPublicRoute && user && path === '/login') {
-    return NextResponse.redirect(new URL('/dashboard', request.nextUrl));
+    return NextResponse.redirect(new URL('/', request.nextUrl));
   }
   
   return NextResponse.next();

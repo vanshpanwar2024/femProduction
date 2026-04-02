@@ -59,7 +59,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
       }
 
       onClose(); // Close the modal on success
-      router.push("/dashboard");
+      router.push("/");
       router.refresh(); // Refresh layout to update Navbar state
     } catch (err: any) {
       setError(err.message);
