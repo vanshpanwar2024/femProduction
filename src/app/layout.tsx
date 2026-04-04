@@ -48,12 +48,12 @@ export default async function RootLayout({
 
               {/* Contact Information */}
               <div className="space-y-6">
-                <h4 className="uppercase inline-block border border-[#D4A435] text-[#D4A435] text-[10px] tracking-[3px] px-2 py-1">
+                <h4 className="uppercase inline-block border border-[#f3c5ae] text-[#f3c5ae] text-[10px] tracking-[3px] px-2 py-1">
                   Contact Us
                 </h4>
                 <div className="space-y-4 text-zinc-300 font-light text-sm">
                   <div className="flex items-start gap-4">
-                    <span className="text-[#D4A435] text-lg mt-0.5">●</span>
+                    <span className="text-[#f3c5ae] text-lg mt-0.5">●</span>
                     <p className="leading-relaxed">
                       <strong className="text-white font-medium block mb-1">Head Office</strong>
                       613A, Tower-C,<br />
@@ -62,12 +62,12 @@ export default async function RootLayout({
                     </p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className="text-[#D4A435] text-lg">●</span>
+                    <span className="text-[#f3c5ae] text-lg">●</span>
                     <p className="tracking-widest">+91 9217640015, +91 9211119942</p>
                   </div>
                   <div className="flex items-center gap-4">
-                    <span className="text-[#D4A435] text-lg">●</span>
-                    <a href="mailto:info@femproduction.in" className="hover:text-[#D4A435] transition-colors duration-300">
+                    <span className="text-[#f3c5ae] text-lg">●</span>
+                    <a href="mailto:info@femproduction.in" className="hover:text-[#f3c5ae] transition-colors duration-300">
                       info@femproduction.in
                     </a>
                   </div>
@@ -76,7 +76,7 @@ export default async function RootLayout({
 
               {/* Legal / Actions */}
               <div className="space-y-6 flex flex-col items-start md:items-end md:text-right">
-                <h4 className="uppercase inline-block border border-[#D4A435] text-[#D4A435] text-[10px] tracking-[3px] px-2 py-1">
+                <h4 className="uppercase inline-block border border-[#f3c5ae] text-[#f3c5ae] text-[10px] tracking-[3px] px-2 py-1">
                   Legal
                 </h4>
                 <p className="text-zinc-400 font-light text-sm max-w-[250px]">
@@ -84,7 +84,7 @@ export default async function RootLayout({
                 </p>
                 <Link 
                   href="/privacy-policy" 
-                  className="inline-block mt-4 px-6 py-3 border border-zinc-700 text-zinc-300 font-medium hover:border-[#D4A435] hover:text-[#D4A435] bg-black/40 hover:bg-[#D4A435]/10 transition-all duration-300 tracking-widest uppercase text-[11px]"
+                  className="inline-block mt-4 px-6 py-3 border border-zinc-700 text-zinc-300 font-medium hover:border-[#f3c5ae] hover:text-[#f3c5ae] bg-black/40 hover:bg-[#f3c5ae]/10 transition-all duration-300 tracking-widest uppercase text-[11px]"
                 >
                   Privacy Policy
                 </Link>

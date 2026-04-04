@@ -69,7 +69,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
       )}
       
       {successMsg && (
-        <div className="p-4 bg-[#D4A435]/10 border border-[#D4A435]/50 text-[#D4A435] text-sm font-light tracking-wide">
+        <div className="p-4 bg-[#f3c5ae]/10 border border-[#f3c5ae]/50 text-[#f3c5ae] text-sm font-light tracking-wide">
           {successMsg}
         </div>
       )}
@@ -77,7 +77,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
       <div className={`grid grid-cols-1 gap-6 ${isRegistered ? "opacity-60 pointer-events-none" : ""}`}>
         {/* Name */}
         <div className="space-y-2">
-          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="name">Full Name</label>
+          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="name">Full Name</label>
           <input 
             type="text" 
             name="name" 
@@ -86,14 +86,14 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
             onChange={handleChange} 
             required
             disabled={isRegistered}
-            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
+            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
           />
         </div>
 
         {/* Age and DOB Group */}
         <div className="flex gap-4">
           <div className="space-y-2 w-1/3">
-            <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="age">Age</label>
+            <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="age">Age</label>
             <input 
               type="number" 
               name="age" 
@@ -103,11 +103,11 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
               value={formData.age} 
               onChange={handleChange} 
               disabled={isRegistered}
-              className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
+              className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
             />
           </div>
           <div className="space-y-2 w-2/3">
-            <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="dob">Date of Birth</label>
+            <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="dob">Date of Birth</label>
             <input 
               type="date" 
               name="dob" 
@@ -115,21 +115,21 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
               value={formData.dob} 
               onChange={handleChange} 
               disabled={isRegistered}
-              className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors uppercase disabled:bg-zinc-900 disabled:text-zinc-500"
+              className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors uppercase disabled:bg-zinc-900 disabled:text-zinc-500"
             />
           </div>
         </div>
 
         {/* Gender */}
         <div className="space-y-2">
-          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="gender">Gender</label>
+          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="gender">Gender</label>
           <select 
             name="gender" 
             id="gender" 
             value={formData.gender} 
             onChange={handleChange} 
             disabled={isRegistered}
-            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors appearance-none disabled:bg-zinc-900 disabled:text-zinc-500"
+            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors appearance-none disabled:bg-zinc-900 disabled:text-zinc-500"
           >
             <option value="">Select Gender</option>
             <option value="Male">Male</option>
@@ -141,7 +141,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
 
         {/* Category */}
         <div className="space-y-2">
-          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="category">Category</label>
+          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="category">Category</label>
           <select 
             name="category" 
             id="category" 
@@ -149,7 +149,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
             onChange={handleChange} 
             required
             disabled={isRegistered}
-            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors appearance-none disabled:bg-zinc-900 disabled:text-zinc-500"
+            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors appearance-none disabled:bg-zinc-900 disabled:text-zinc-500"
           >
             <option value="">Select Category</option>
             <option value="Dancer">Dancer</option>
@@ -163,7 +163,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
 
         {/* Social Link */}
         <div className="space-y-2">
-          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="socialLink">Social Media Profile</label>
+          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="socialLink">Social Media Profile</label>
           <input 
             type="url" 
             name="socialLink" 
@@ -172,13 +172,13 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
             value={formData.socialLink} 
             onChange={handleChange} 
             disabled={isRegistered}
-            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
+            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
           />
         </div>
 
         {/* Portfolio Link */}
         <div className="space-y-2">
-          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="portfolioLink">Portfolio Link</label>
+          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="portfolioLink">Portfolio Link</label>
           <input 
             type="url" 
             name="portfolioLink" 
@@ -187,14 +187,14 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
             value={formData.portfolioLink} 
             onChange={handleChange} 
             disabled={isRegistered}
-            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
+            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
           />
         </div>
       </div>
 
       {/* Bio */}
       <div className={`space-y-2 pt-2 ${isRegistered ? "opacity-60 pointer-events-none" : ""}`}>
-        <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#D4A435] block" htmlFor="bio">Professional Bio</label>
+        <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="bio">Professional Bio</label>
         <textarea 
           name="bio" 
           id="bio" 
@@ -203,7 +203,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
           value={formData.bio} 
           onChange={handleChange} 
           disabled={isRegistered}
-          className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors resize-none disabled:bg-zinc-900 disabled:text-zinc-500"
+          className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors resize-none disabled:bg-zinc-900 disabled:text-zinc-500"
         ></textarea>
       </div>
 
@@ -214,7 +214,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
           className={`w-full md:w-auto px-8 py-4 uppercase tracking-widest text-sm font-medium transition-colors ${
             isRegistered 
               ? "bg-zinc-800 text-zinc-500 cursor-not-allowed" 
-              : "bg-[#D4A435] text-black hover:bg-white border border-transparent disabled:opacity-50"
+              : "bg-[#f3c5ae] text-black hover:bg-white border border-transparent disabled:opacity-50"
           }`}
         >
           {isRegistered ? "Registration Under Review" : (isLoading ? "Saving..." : "Complete Registration")}

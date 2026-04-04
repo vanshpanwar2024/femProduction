@@ -78,7 +78,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
 
         {/* Mobile menu button */}
         <button 
-          className="md:hidden relative z-50 p-2 text-white hover:text-[#D4A435] transition-colors"
+          className="md:hidden relative z-50 p-2 text-white hover:text-[#f3c5ae] transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -172,10 +172,10 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
         }`}
       >
         <div className="flex flex-col items-center justify-center space-y-8 text-xl font-medium tracking-wide">
-          <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/" ? "text-[#D4A435]" : "text-white"}`}>Home</Link>
-          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/about" ? "text-[#D4A435]" : "text-white"}`}>About Us</Link>
-          <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/gallery" ? "text-[#D4A435]" : "text-white"}`}>Gallery</Link>
-          <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/events" ? "text-[#D4A435]" : "text-white"}`}>Upcoming Events</Link>
+          <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/" ? "text-[#f3c5ae]" : "text-white"}`}>Home</Link>
+          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/about" ? "text-[#f3c5ae]" : "text-white"}`}>About Us</Link>
+          <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/gallery" ? "text-[#f3c5ae]" : "text-white"}`}>Gallery</Link>
+          <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/events" ? "text-[#f3c5ae]" : "text-white"}`}>Upcoming Events</Link>
           
           {!pathname.startsWith("/admin") && (
             <div className="pt-8 flex flex-col items-center gap-6 w-full px-6">
@@ -187,9 +187,9 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
                     aria-label="Toggle profile menu"
                   >
                     {user?.avatar ? (
-                      <img src={user.avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover border-2 border-[#D4A435] shadow-[0_0_15px_rgba(212,164,53,0.3)]" referrerPolicy="no-referrer"/>
+                      <img src={user.avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover border-2 border-[#f3c5ae] shadow-[0_0_15px_rgba(212,164,53,0.3)]" referrerPolicy="no-referrer"/>
                     ) : (
-                      <div className="w-16 h-16 rounded-full bg-zinc-800 border-2 border-[#D4A435] shadow-[0_0_15px_rgba(212,164,53,0.3)] flex items-center justify-center text-2xl font-medium text-white tracking-wider uppercase">
+                      <div className="w-16 h-16 rounded-full bg-zinc-800 border-2 border-[#f3c5ae] shadow-[0_0_15px_rgba(212,164,53,0.3)] flex items-center justify-center text-2xl font-medium text-white tracking-wider uppercase">
                         {user?.name?.[0] || user?.email?.[0] || "U"}
                       </div>
                     )}
@@ -199,7 +199,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
                     <div className="flex flex-col items-center w-full gap-6 mt-6 animate-in fade-in slide-in-from-top-2 duration-300">
                       <div className="text-center pb-4 w-3/4 border-b border-zinc-800/50">
                         <p className="text-white text-lg font-medium">{user?.name || "User"}</p>
-                        <p className="text-[#D4A435] text-xs pt-1">{user?.email || ""}</p>
+                        <p className="text-[#f3c5ae] text-xs pt-1">{user?.email || ""}</p>
                       </div>
                       <Link href="/register" onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); }} className="text-zinc-300 hover:text-white transition-colors text-lg">Register</Link>
                       <Link href="/profile" onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); }} className="text-zinc-300 hover:text-white transition-colors text-lg">Profile</Link>

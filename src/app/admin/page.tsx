@@ -47,21 +47,21 @@ export default async function AdminPage() {
       
       <div className="w-full space-y-6">
         <h2 className="text-3xl md:text-4xl font-light tracking-widest uppercase text-white leading-tight">
-          Admin <span className="text-[#D4A435]">Dashboard</span>
+          Admin <span className="text-[#f3c5ae]">Dashboard</span>
         </h2>
-        <div className="w-32 h-[1px] bg-[#D4A435] opacity-50 mb-12"></div>
+        <div className="w-32 h-[1px] bg-[#f3c5ae] opacity-50 mb-12"></div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-8 border border-[#D4A435]/30 bg-black/40 hover:bg-[#D4A435]/10 transition-colors cursor-default text-center space-y-3">
-             <h3 className="text-[#D4A435] tracking-widest uppercase text-[10px]">Total Registrations</h3>
+          <div className="p-8 border border-[#f3c5ae]/30 bg-black/40 hover:bg-[#f3c5ae]/10 transition-colors cursor-default text-center space-y-3">
+             <h3 className="text-[#f3c5ae] tracking-widest uppercase text-[10px]">Total Registrations</h3>
              <p className="text-4xl font-light text-white">{totalRegistrations}</p>
           </div>
-          <div className="p-8 border border-[#D4A435]/30 bg-black/40 hover:bg-[#D4A435]/10 transition-colors cursor-default text-center space-y-3">
-             <h3 className="text-[#D4A435] tracking-widest uppercase text-[10px]">Pending Approvals</h3>
+          <div className="p-8 border border-[#f3c5ae]/30 bg-black/40 hover:bg-[#f3c5ae]/10 transition-colors cursor-default text-center space-y-3">
+             <h3 className="text-[#f3c5ae] tracking-widest uppercase text-[10px]">Pending Approvals</h3>
              <p className="text-4xl font-light text-white">{pendingApprovals}</p>
           </div>
-          <div className="p-8 border border-[#D4A435]/30 bg-black/40 hover:bg-[#D4A435]/10 transition-colors cursor-default text-center space-y-3">
-             <h3 className="text-[#D4A435] tracking-widest uppercase text-[10px]">Active Categories</h3>
+          <div className="p-8 border border-[#f3c5ae]/30 bg-black/40 hover:bg-[#f3c5ae]/10 transition-colors cursor-default text-center space-y-3">
+             <h3 className="text-[#f3c5ae] tracking-widest uppercase text-[10px]">Active Categories</h3>
              <p className="text-4xl font-light text-white">{uniqueCategories}</p>
           </div>
         </div>

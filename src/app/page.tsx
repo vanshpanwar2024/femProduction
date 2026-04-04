@@ -71,14 +71,14 @@ export default function Home() {
       <section className="relative lg:sticky lg:top-0 z-10 w-full min-h-[100svh] flex flex-col justify-center py-16 lg:py-24 px-6 bg-black shadow-[0_-20px_60px_rgba(0,0,0,0.8)]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16 w-full">
           <div className="w-full md:w-1/2 space-y-6 lg:pr-8">
-            <div className="uppercase inline-block mb-2 border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
+            <div className="uppercase inline-block mb-2 border border-[#f3c5ae] text-[#f3c5ae] text-xs tracking-[3px] px-3 py-1">
               Who We Are
             </div>
             <h2 className="text-4xl md:text-5xl font-light tracking-wider uppercase text-white leading-tight">
               Welcome to <br />
-              <span className="font-serif italic text-[#D4A435]">Fem House</span>
+              <span className="font-serif italic text-[#f3c5ae]">Fem House</span>
             </h2>
-            <div className="w-24 h-[2px] bg-[#D4A435] opacity-80 my-8"></div>
+            <div className="w-24 h-[2px] bg-[#f3c5ae] opacity-80 my-8"></div>
             
             <div className="space-y-6">
               <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
             
             <div className="pt-4">
-              <Link href="/register" className="inline-block mt-4 px-8 py-4 border border-[#D4A435] text-[#D4A435] font-medium hover:bg-[#D4A435] hover:text-black transition-colors duration-500 tracking-widest uppercase text-sm">
+              <Link href="/register" className="inline-block mt-4 px-8 py-4 border border-[#f3c5ae] text-[#f3c5ae] font-medium hover:bg-[#f3c5ae] hover:text-black transition-colors duration-500 tracking-widest uppercase text-sm">
                 Join The Community
               </Link>
             </div>
@@ -106,7 +106,7 @@ export default function Home() {
       <section className="relative lg:sticky lg:top-0 z-20 w-full min-h-[100svh] flex flex-col justify-center py-12 md:py-20 lg:py-24 px-6 bg-zinc-950 border-t border-zinc-900 shadow-[0_-20px_60px_rgba(0,0,0,0.8)]">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center max-w-4xl mx-auto space-y-8 mb-16 md:mb-20">
-            <div className="uppercase inline-block border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
+            <div className="uppercase inline-block border border-[#f3c5ae] text-[#f3c5ae] text-xs tracking-[3px] px-3 py-1">
               Competitions We Offer
             </div>
             <p className="text-zinc-400 leading-relaxed text-2xl md:text-3xl font-light tracking-wide font-serif italic">
@@ -121,14 +121,14 @@ export default function Home() {
             </div>
             
             <div className="w-full lg:w-1/2 space-y-6 lg:pl-8 order-1 lg:order-2">
-              <div className="uppercase inline-block mb-2 border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
+              <div className="uppercase inline-block mb-2 border border-[#f3c5ae] text-[#f3c5ae] text-xs tracking-[3px] px-3 py-1">
                 Your Journey
               </div>
               <h2 className="text-4xl md:text-5xl font-light tracking-wider uppercase text-white leading-tight">
                 Embark on Your <br />
-                <span className="font-serif italic text-[#D4A435]">Creative Odyssey</span>
+                <span className="font-serif italic text-[#f3c5ae]">Creative Odyssey</span>
               </h2>
-              <div className="w-24 h-[2px] bg-[#D4A435] opacity-80 my-8"></div>
+              <div className="w-24 h-[2px] bg-[#f3c5ae] opacity-80 my-8"></div>
               
               <div className="space-y-6">
                 <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
@@ -137,7 +137,7 @@ export default function Home() {
                 <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
                   At Fem House, we&apos;re not just a platform; we&apos;re a canvas for your dreams. After you join us, your journey towards self-discovery and artistic growth begins. Together, we&apos;ll nurture your talents, fuel your passions, and inspire your creativity.
                 </p>
-                <p className="text-[#D4A435] leading-relaxed text-lg font-medium tracking-widest uppercase text-sm pt-4">
+                <p className="text-[#f3c5ae] leading-relaxed text-lg font-medium tracking-widest uppercase text-sm pt-4">
                   Welcome to a world where your artistic aspirations become reality.
                 </p>
               </div>
@@ -150,14 +150,14 @@ export default function Home() {
       <section className="relative z-30 min-h-screen flex flex-col justify-center py-32 px-6 bg-black shadow-[0_-20px_60px_rgba(0,0,0,0.8)] border-t border-zinc-900">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center space-y-4 mb-20">
-            <div className="uppercase inline-block mb-2 border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
+            <div className="uppercase inline-block mb-2 border border-[#f3c5ae] text-[#f3c5ae] text-xs tracking-[3px] px-3 py-1">
               Curiosity
             </div>
             <h2 className="text-4xl md:text-5xl font-light tracking-wider uppercase text-white leading-tight">
               Frequently Asked <br />
-              <span className="font-serif italic text-[#D4A435]">Questions</span>
+              <span className="font-serif italic text-[#f3c5ae]">Questions</span>
             </h2>
-            <div className="w-24 h-[2px] bg-[#D4A435] opacity-80 mx-auto mt-6"></div>
+            <div className="w-24 h-[2px] bg-[#f3c5ae] opacity-80 mx-auto mt-6"></div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-16 gap-y-4">
@@ -165,7 +165,7 @@ export default function Home() {
             <div className="flex flex-col border-t border-zinc-900">
               {faqs.slice(0, 6).map((faq, index) => (
                 <div key={index} className="group border-b border-zinc-900 py-6 cursor-default">
-                  <h3 className="font-light tracking-wide text-zinc-300 text-lg md:text-xl transition-colors duration-300 group-hover:text-[#D4A435]">
+                  <h3 className="font-light tracking-wide text-zinc-300 text-lg md:text-xl transition-colors duration-300 group-hover:text-[#f3c5ae]">
                     {faq.q}
                   </h3>
                   <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
@@ -183,7 +183,7 @@ export default function Home() {
             <div className="flex flex-col border-t border-zinc-900">
               {faqs.slice(6, 12).map((faq, index) => (
                 <div key={index + 6} className="group border-b border-zinc-900 py-6 cursor-default">
-                  <h3 className="font-light tracking-wide text-zinc-300 text-lg md:text-xl transition-colors duration-300 group-hover:text-[#D4A435]">
+                  <h3 className="font-light tracking-wide text-zinc-300 text-lg md:text-xl transition-colors duration-300 group-hover:text-[#f3c5ae]">
                     {faq.q}
                   </h3>
                   <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">

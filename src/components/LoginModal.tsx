@@ -100,7 +100,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
       <div className="fixed inset-0 overflow-y-auto pointer-events-none">
         <div className="flex min-h-full flex-col items-center justify-center p-4 py-12">
           
-          <div className="w-full max-w-md p-8 md:p-12 bg-zinc-950 border border-[#D4A435]/30 space-y-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200 min-h-[580px] flex flex-col justify-start pointer-events-auto">
+          <div className="w-full max-w-md p-8 md:p-12 bg-zinc-950 border border-[#f3c5ae]/30 space-y-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200 min-h-[580px] flex flex-col justify-start pointer-events-auto">
         
         {/* Close button */}
         <button 
@@ -116,7 +116,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <button
             onClick={() => setIsLogin(true)}
             className={`flex-1 pb-4 text-sm font-medium tracking-widest uppercase transition-colors ${
-              isLogin ? "text-[#D4A435] border-b-2 border-[#D4A435]" : "text-zinc-500 hover:text-zinc-300"
+              isLogin ? "text-[#f3c5ae] border-b-2 border-[#f3c5ae]" : "text-zinc-500 hover:text-zinc-300"
             }`}
           >
             Login
@@ -124,7 +124,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <button
             onClick={() => setIsLogin(false)}
             className={`flex-1 pb-4 text-sm font-medium tracking-widest uppercase transition-colors ${
-              !isLogin ? "text-[#D4A435] border-b-2 border-[#D4A435]" : "text-zinc-500 hover:text-zinc-300"
+              !isLogin ? "text-[#f3c5ae] border-b-2 border-[#f3c5ae]" : "text-zinc-500 hover:text-zinc-300"
             }`}
           >
             Signup
@@ -135,7 +135,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <h1 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-white">
             {isLogin ? "Welcome Back" : "Join Us"}
           </h1>
-          <p className="text-[#D4A435] text-xs">
+          <p className="text-[#f3c5ae] text-xs">
             {isLogin ? "Sign in to access your account" : "Create an account to RSVP"}
           </p>
         </div>
@@ -149,13 +149,13 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         <form onSubmit={handleSubmit} className="space-y-6">
           {!isLogin && (
             <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-              <label className="text-[10px] uppercase tracking-[3px] text-[#D4A435]" htmlFor="name">Full Name</label>
+              <label className="text-[10px] uppercase tracking-[3px] text-[#f3c5ae]" htmlFor="name">Full Name</label>
               <input
                 id="name"
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435]/50 transition-colors"
+                className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae]/50 transition-colors"
                 placeholder="Jane Doe"
                 required={!isLogin}
               />
@@ -163,26 +163,26 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           )}
 
           <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <label className="text-[10px] uppercase tracking-[3px] text-[#D4A435]" htmlFor="email">Email address</label>
+            <label className="text-[10px] uppercase tracking-[3px] text-[#f3c5ae]" htmlFor="email">Email address</label>
             <input
               id="email"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435]/50 transition-colors"
+              className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae]/50 transition-colors"
               placeholder="user@example.com"
               required
             />
           </div>
 
           <div className="space-y-2 animate-in fade-in slide-in-from-bottom-2 duration-300">
-            <label className="text-[10px] uppercase tracking-[3px] text-[#D4A435]" htmlFor="password">Password</label>
+            <label className="text-[10px] uppercase tracking-[3px] text-[#f3c5ae]" htmlFor="password">Password</label>
             <input
               id="password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#D4A435]/50 transition-colors"
+              className="w-full bg-black border border-zinc-800 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae]/50 transition-colors"
               placeholder="••••••••"
               required
             />
@@ -192,7 +192,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <button
             type="submit"
             disabled={isLoading}
-            className="w-full bg-white text-black py-4 uppercase tracking-widest text-sm font-medium hover:bg-[#D4A435] hover:text-white transition-colors disabled:opacity-50 mt-4"
+            className="w-full bg-white text-black py-4 uppercase tracking-widest text-sm font-medium hover:bg-[#f3c5ae] hover:text-white transition-colors disabled:opacity-50 mt-4"
           >
             {isLoading ? "Processing..." : (isLogin ? "Enter" : "Create Account")}
           </button>
@@ -224,7 +224,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <button 
             type="button" 
             onClick={toggleAuthMode}
-            className="text-[10px] text-zinc-500 hover:text-[#D4A435] uppercase tracking-[2px] transition-colors pb-1 border-b border-transparent hover:border-[#D4A435]"
+            className="text-[10px] text-zinc-500 hover:text-[#f3c5ae] uppercase tracking-[2px] transition-colors pb-1 border-b border-transparent hover:border-[#f3c5ae]"
           >
             {isLogin ? "Don't have an account? Sign up" : "Already have an account? Log in"}
           </button>

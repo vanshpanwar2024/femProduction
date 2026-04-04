@@ -34,54 +34,54 @@ export default async function ProfilePage() {
       <div className="w-full md:w-6/12 lg:w-7/12 pt-0 md:pt-4 md:pr-10 lg:pr-16 flex flex-col justify-center">
         <h2 className="text-2xl md:text-3xl font-light tracking-widest uppercase text-white leading-tight mb-4">
           Talented Artists, <br className="hidden md:block"/>
-          <span className="text-[#D4A435]">Diverse Categories</span>
+          <span className="text-[#f3c5ae]">Diverse Categories</span>
         </h2>
-        <div className="w-20 h-[1px] bg-[#D4A435] opacity-50 mb-8"></div>
+        <div className="w-20 h-[1px] bg-[#f3c5ae] opacity-50 mb-8"></div>
         
         <div className="space-y-6 pb-4">
           
-          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
-            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Dancers</h3>
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#f3c5ae] before:rounded-full pl-4">
+            <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Dancers</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Elevate Your Dance Skills</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
               At Fem House, we provide a dedicated platform for dancers to showcase their artistry. Join our vibrant community of dancers and immerse yourself in an environment that celebrates your passion. Compete, learn, and grow with constructive feedback and mentorship from experienced judges.
             </p>
           </div>
 
-          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
-            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Actors</h3>
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#f3c5ae] before:rounded-full pl-4">
+            <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Actors</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Unleash Your Acting Potential</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
               For aspiring actors, Fem House is your stage to shine. Explore your acting talents, audition in front of seasoned judges, and receive valuable feedback to refine your craft. We believe in nurturing your potential through mentorship and training, both online and offline.
             </p>
           </div>
 
-          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
-            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Singers</h3>
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#f3c5ae] before:rounded-full pl-4">
+            <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Singers</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Harmonize Your Voice with Excellence</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
               At Fem House, we recognize the power of the human voice. Singers of all genres and styles are welcomed to participate and showcase their vocal prowess. Compete in a supportive environment, receive expert feedback, and access mentorship to fine-tune your singing skills.
             </p>
           </div>
 
-          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
-            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Comedians</h3>
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#f3c5ae] before:rounded-full pl-4">
+            <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Comedians</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Spread Laughter and Comedy Brilliance</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
               Comedy is an art, and at Fem House, we celebrate the brilliance of comedians. Join our community of funny and witty minds, perform your best routines, and compete for recognition. Our experienced judges provide valuable insights to enhance your comedic timing and delivery.
             </p>
           </div>
 
-          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
-            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Rappers</h3>
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#f3c5ae] before:rounded-full pl-4">
+            <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Rappers</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Rap with Passion and Precision</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
               Rap is a form of lyrical artistry, and at Fem House, we provide a stage for passionate rappers to showcase their skills. Participate in rap battles, impress judges with your lyrical prowess, and receive constructive feedback to elevate your craft.
             </p>
           </div>
 
-          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#D4A435] before:rounded-full pl-4">
-            <h3 className="text-[#D4A435] text-[10px] uppercase tracking-[3px]">Models</h3>
+          <div className="space-y-1.5 relative before:absolute before:left-[-14px] before:top-1.5 before:w-1.5 before:h-1.5 before:bg-[#f3c5ae] before:rounded-full pl-4">
+            <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Models</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Strut Your Style on the Runway</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
                For aspiring models, Fem House is the runway to strut your style and grace. Showcase your modeling talent, compete with confidence, and receive expert guidance to enhance your modeling skills. Join us and make your presence felt on the glamorous stage.
@@ -98,7 +98,7 @@ export default async function ProfilePage() {
           <div className={`uppercase inline-block mb-2 border text-[10px] tracking-[2px] px-2 py-0.5 ${
             existingProfile?.status === 'approved' ? 'border-green-500 text-green-500' :
             existingProfile?.status === 'declined' ? 'border-red-500 text-red-500' :
-            'border-[#D4A435] text-[#D4A435]'
+            'border-[#f3c5ae] text-[#f3c5ae]'
           }`}>
             {existingProfile?.status === 'approved' ? "Approved" : 
              existingProfile?.status === 'declined' ? "Declined" : 
@@ -112,7 +112,7 @@ export default async function ProfilePage() {
           <div className={`w-16 h-[1px] opacity-50 ${
             existingProfile?.status === 'approved' ? 'bg-green-500' :
             existingProfile?.status === 'declined' ? 'bg-red-500' :
-            'bg-[#D4A435]'
+            'bg-[#f3c5ae]'
           }`}></div>
           
           {existingProfile?.status === 'approved' ? (
@@ -128,8 +128,8 @@ export default async function ProfilePage() {
               </p>
             </div>
           ) : existingProfile ? (
-            <div className="mt-4 p-3 bg-[#D4A435]/10 border border-[#D4A435]/50">
-              <p className="text-[#D4A435] text-[11px] md:text-xs tracking-wide">
+            <div className="mt-4 p-3 bg-[#f3c5ae]/10 border border-[#f3c5ae]/50">
+              <p className="text-[#f3c5ae] text-[11px] md:text-xs tracking-wide">
                 Thanks for registering! Our experts are currently reviewing your profile.
               </p>
             </div>
@@ -140,11 +140,11 @@ export default async function ProfilePage() {
           )}
         </div>
         
-        <div className="flex items-center space-x-4 pb-6 border-b border-[#D4A435]/30">
+        <div className="flex items-center space-x-4 pb-6 border-b border-[#f3c5ae]/30">
           {user.avatar ? (
-            <img src={user.avatar} alt="Profile" className="w-14 h-14 rounded-full border border-[#D4A435] object-cover p-0.5" />
+            <img src={user.avatar} alt="Profile" className="w-14 h-14 rounded-full border border-[#f3c5ae] object-cover p-0.5" />
           ) : (
-            <div className="w-14 h-14 rounded-full bg-black border border-[#D4A435] text-[#D4A435] flex items-center justify-center text-xl font-medium tracking-widest uppercase">
+            <div className="w-14 h-14 rounded-full bg-black border border-[#f3c5ae] text-[#f3c5ae] flex items-center justify-center text-xl font-medium tracking-widest uppercase">
               {user.name?.[0] || user.email?.[0] || "U"}
             </div>
           )}
@@ -155,7 +155,7 @@ export default async function ProfilePage() {
 
         <ProfileForm user={user} existingProfile={existingProfile} />
 
-        <div className="pt-6 border-t border-[#D4A435]/30 text-center">
+        <div className="pt-6 border-t border-[#f3c5ae]/30 text-center">
           <p className="text-zinc-500 italic text-[9px] uppercase tracking-[2px]">Connected via {user.provider === "google" ? "Google Authentication" : "Native Account"}.</p>
         </div>
         </div>

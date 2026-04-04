@@ -12,30 +12,30 @@ export default function PrivacyPolicy() {
 
       <div className="max-w-4xl mx-auto space-y-12 relative z-10">
         <div className="text-center space-y-4">
-          <div className="uppercase inline-block mb-2 border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
+          <div className="uppercase inline-block mb-2 border border-[#f3c5ae] text-[#f3c5ae] text-xs tracking-[3px] px-3 py-1">
             Legal
           </div>
           <h1 className="text-4xl md:text-5xl font-light tracking-wider uppercase text-white leading-tight">
-            Privacy <span className="font-serif italic text-[#D4A435]">Policy</span>
+            Privacy <span className="font-serif italic text-[#f3c5ae]">Policy</span>
           </h1>
           <p className="text-zinc-500 font-light tracking-widest text-sm uppercase pt-4">
             Effective Date: 01/04/2024
           </p>
         </div>
 
-        <div className="w-24 h-[1px] bg-[#D4A435] opacity-50 mx-auto"></div>
+        <div className="w-24 h-[1px] bg-[#f3c5ae] opacity-50 mx-auto"></div>
 
         <div className="space-y-12 text-zinc-300 font-light leading-relaxed text-lg pb-16">
           
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">1. Introduction</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">1. Introduction</h2>
             <p>
-              Welcome to <span className="text-[#D4A435]">Fem House</span>. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website https://femproduction.in/ and use our services.
+              Welcome to <span className="text-[#f3c5ae]">Fem House</span>. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website https://femproduction.in/ and use our services.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">2. Information We Collect</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">2. Information We Collect</h2>
             
             <div className="space-y-4 pl-4 border-l border-zinc-800">
               <div>
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">3. How We Use Your Information</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">3. How We Use Your Information</h2>
             <p>We use the information we collect for various purposes, including:</p>
             <ul className="list-disc pl-8 space-y-2 text-zinc-400">
               <li>To process your registration and participation in pageant events</li>
@@ -79,7 +79,7 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">4. How We Share Your Information</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">4. How We Share Your Information</h2>
             <p>We may share your information in the following circumstances:</p>
             <div className="space-y-4 pl-4 border-l border-zinc-800 text-zinc-400">
               <p><strong className="text-white">Service Providers:</strong> We may share your information with third-party service providers who assist us in operating our Site, conducting our business, or servicing you (e.g., payment processors, email service providers). These third parties are obligated to protect your information and use it only for the purposes for which it was shared.</p>
@@ -89,14 +89,14 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">5. Data Security</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">5. Data Security</h2>
             <p>
               We implement reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is completely secure. We cannot guarantee absolute security, but we strive to use commercially acceptable means to protect your information.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">6. Your Choices</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">6. Your Choices</h2>
             <p>You have certain choices regarding the information we collect and how we use it:</p>
             <div className="space-y-4 pl-4 border-l border-zinc-800 text-zinc-400">
               <p><strong className="text-white">Access and Update:</strong> You may access and update your personal information by logging into your account or contacting us directly.</p>
@@ -106,23 +106,23 @@ export default function PrivacyPolicy() {
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">7. Children&apos;s Privacy</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">7. Children&apos;s Privacy</h2>
             <p>
               Our Site is not intended for children under the age of 9. We do not knowingly collect personal information from children under 9. If we become aware that we have collected such information, we will take steps to delete it.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">8. Changes to This Privacy Policy</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">8. Changes to This Privacy Policy</h2>
             <p>
               We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-2xl text-[#D4A435] font-medium tracking-wide">9. Contact Us</h2>
+            <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">9. Contact Us</h2>
             <p>
-              If you have any questions or concerns about this Privacy Policy or our data practices, please <a href="mailto:info@femproduction.in" className="text-[#D4A435] hover:underline underline-offset-4">contact us</a>.
+              If you have any questions or concerns about this Privacy Policy or our data practices, please <a href="mailto:info@femproduction.in" className="text-[#f3c5ae] hover:underline underline-offset-4">contact us</a>.
             </p>
           </section>
 

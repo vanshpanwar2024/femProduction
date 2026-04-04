@@ -9,13 +9,13 @@ export default function GalleryPage() {
       </div>
 
       <div className="relative z-10 text-center space-y-6 px-6">
-        <div className="uppercase inline-block mb-4 border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-4 py-2">
+        <div className="uppercase inline-block mb-4 border border-[#f3c5ae] text-[#f3c5ae] text-xs tracking-[3px] px-4 py-2">
           Gallery
         </div>
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-widest uppercase text-white leading-tight">
-          Coming <span className="font-serif italic text-[#D4A435]">Soon</span>
+          Coming <span className="font-serif italic text-[#f3c5ae]">Soon</span>
         </h1>
-        <div className="w-24 h-[1px] bg-[#D4A435] opacity-50 mx-auto mt-8"></div>
+        <div className="w-24 h-[1px] bg-[#f3c5ae] opacity-50 mx-auto mt-8"></div>
         <p className="text-zinc-500 font-light tracking-widest text-sm md:text-base uppercase pt-6">
           Our visual journey is being curated.
         </p>

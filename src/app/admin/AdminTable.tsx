@@ -58,7 +58,7 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
     <div className="space-y-6">
       
       {/* FILTER & SEARCH BAR */}
-      <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-zinc-950/50 p-4 border border-[#D4A435]/30">
+      <div className="flex flex-col md:flex-row gap-4 items-center justify-between bg-zinc-950/50 p-4 border border-[#f3c5ae]/30">
         <div className="flex gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
           {(["all", "pending", "approved", "declined"] as const).map((status) => (
             <button
@@ -66,7 +66,7 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
               onClick={() => setFilterStatus(status)}
               className={`px-4 py-2 text-[10px] uppercase tracking-widest border transition-colors whitespace-nowrap ${
                 filterStatus === status 
-                  ? "border-[#D4A435] bg-[#D4A435]/10 text-[#D4A435]" 
+                  ? "border-[#f3c5ae] bg-[#f3c5ae]/10 text-[#f3c5ae]" 
                   : "border-zinc-800 text-zinc-500 hover:border-zinc-600 hover:text-zinc-300"
               }`}
             >
@@ -81,12 +81,12 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
             placeholder="Search by name, email or category..." 
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full bg-zinc-900 border border-zinc-800 text-white text-xs px-4 py-2.5 focus:outline-none focus:border-[#D4A435] focus:ring-1 focus:ring-[#D4A435]/50 transition-colors placeholder:text-zinc-600 tracking-wide"
+            className="w-full bg-zinc-900 border border-zinc-800 text-white text-xs px-4 py-2.5 focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors placeholder:text-zinc-600 tracking-wide"
           />
           {searchQuery && (
             <button 
               onClick={() => setSearchQuery("")}
-              className="absolute right-3 top-1/2 -transform-y-1/2 -translate-y-1/2 text-zinc-500 hover:text-[#D4A435]"
+              className="absolute right-3 top-1/2 -transform-y-1/2 -translate-y-1/2 text-zinc-500 hover:text-[#f3c5ae]"
             >
               ✕
             </button>
@@ -101,7 +101,7 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
       ) : (
         <div className="overflow-x-auto border border-zinc-800">
           <table className="w-full text-left text-sm text-zinc-400">
-            <thead className="bg-[#D4A435]/10 text-[#D4A435] text-[10px] uppercase tracking-widest border-b border-[#D4A435]/30">
+            <thead className="bg-[#f3c5ae]/10 text-[#f3c5ae] text-[10px] uppercase tracking-widest border-b border-[#f3c5ae]/30">
               <tr>
                 <th className="px-6 py-4 font-medium">Name / Email</th>
                 <th className="px-6 py-4 font-medium hidden md:table-cell">Age & DOB</th>
@@ -129,10 +129,10 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
               </td>
               <td className="px-6 py-4 hidden lg:table-cell space-y-1">
                 {profile.socialLink && (
-                  <a href={profile.socialLink} target="_blank" rel="noreferrer" className="block text-[10px] text-[#D4A435] hover:underline underline-offset-2">Social</a>
+                  <a href={profile.socialLink} target="_blank" rel="noreferrer" className="block text-[10px] text-[#f3c5ae] hover:underline underline-offset-2">Social</a>
                 )}
                 {profile.portfolioLink && (
-                  <a href={profile.portfolioLink} target="_blank" rel="noreferrer" className="block text-[10px] text-[#D4A435] hover:underline underline-offset-2">Portfolio</a>
+                  <a href={profile.portfolioLink} target="_blank" rel="noreferrer" className="block text-[10px] text-[#f3c5ae] hover:underline underline-offset-2">Portfolio</a>
                 )}
                 {!profile.socialLink && !profile.portfolioLink && "-"}
               </td>
@@ -154,7 +154,7 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
                 <div className="flex items-center justify-end gap-2">
                   <Link
                     href={`/admin/profile/${profile.id}`}
-                    className="px-3 py-1.5 bg-zinc-900 border border-[#D4A435]/50 text-[#D4A435] hover:bg-[#D4A435]/10 hover:text-[#e4be68] text-[10px] uppercase tracking-widest transition-colors font-medium whitespace-nowrap"
+                    className="px-3 py-1.5 bg-zinc-900 border border-[#f3c5ae]/50 text-[#f3c5ae] hover:bg-[#f3c5ae]/10 hover:text-[#e4be68] text-[10px] uppercase tracking-widest transition-colors font-medium whitespace-nowrap"
                   >
                     View
                   </Link>
