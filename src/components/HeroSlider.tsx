@@ -114,7 +114,7 @@ export default function HeroSlider({ images }: { images: string[] }) {
                 <h2 
                   className="font-barlow-700 uppercase text-[#FFFFFF] drop-shadow-xl leading-none"
                   style={{
-                    fontSize: 'clamp(4rem, 8vw, 7.5rem)',
+                    fontSize: 'clamp(2.5rem, 8vw, 7.5rem)',
                     letterSpacing: '0.08em',
                     opacity: 0,
                     animation: `${animationDir} 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards`

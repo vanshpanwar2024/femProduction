@@ -63,13 +63,13 @@ export default function Home() {
   return (
     <div className="flex flex-col w-full relative">
       {/* Hero Section */}
-      <section className="sticky top-0 h-screen w-full flex flex-col items-center justify-center overflow-hidden -z-0">
+      <section className="relative lg:sticky lg:top-0 h-[100svh] min-h-[600px] w-full flex flex-col items-center justify-center overflow-hidden z-0">
         <HeroSlider images={heroImages} />
       </section>
 
-      {/* Featured Section / Who Are We */}
-      <section className="sticky top-0 z-10 w-full min-h-screen flex flex-col justify-center py-16 lg:py-24 px-6 bg-black shadow-[0_-20px_60px_rgba(0,0,0,0.8)]">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16">
+      {/* Introduction Section */}
+      <section className="relative lg:sticky lg:top-0 z-10 w-full min-h-[100svh] flex flex-col justify-center py-16 lg:py-24 px-6 bg-black shadow-[0_-20px_60px_rgba(0,0,0,0.8)]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 lg:gap-16 w-full">
           <div className="w-full md:w-1/2 space-y-6 lg:pr-8">
             <div className="uppercase inline-block mb-2 border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
               Who We Are
@@ -103,8 +103,8 @@ export default function Home() {
       </section>
 
       {/* Competitions & Odyssey Section */}
-      <section className="sticky top-0 z-20 min-h-screen flex flex-col justify-center py-12 md:py-20 lg:py-24 px-6 bg-zinc-950 border-t border-zinc-900 shadow-[0_-20px_60px_rgba(0,0,0,0.8)]">
-        <div className="max-w-7xl mx-auto">
+      <section className="relative lg:sticky lg:top-0 z-20 w-full min-h-[100svh] flex flex-col justify-center py-12 md:py-20 lg:py-24 px-6 bg-zinc-950 border-t border-zinc-900 shadow-[0_-20px_60px_rgba(0,0,0,0.8)]">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center max-w-4xl mx-auto space-y-8 mb-16 md:mb-20">
             <div className="uppercase inline-block border border-[#D4A435] text-[#D4A435] text-xs tracking-[3px] px-3 py-1">
               Competitions We Offer

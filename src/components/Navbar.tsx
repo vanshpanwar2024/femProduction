@@ -9,6 +9,7 @@ import LoginModal from "./LoginModal";
 export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: boolean; user?: any }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -49,9 +50,24 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center text-white">
-        <Link href="/" className="text-2xl font-bold tracking-widest uppercase text-white hover:text-[#D4A435] transition-colors">
+        <Link href="/" className="text-base sm:text-lg md:text-2xl font-bold tracking-wider md:tracking-widest uppercase text-white hover:text-[#D4A435] transition-colors relative z-50">
           FEM PRODUCTION
         </Link>
+
+        {/* Mobile menu button */}
+        <button 
+          className="md:hidden relative z-50 p-2 text-white hover:text-[#D4A435] transition-colors"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          {isMobileMenuOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+          )}
+        </button>
+
+        {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-end space-x-8 text-sm font-medium tracking-wide items-center">
           <Link href="/" className={`hover:text-gray-400 transition-colors ${pathname === "/" ? "text-white" : "text-gray-300"}`}>Home</Link>
           <Link href="/about" className={`hover:text-gray-400 transition-colors ${pathname === "/about" ? "text-white" : "text-gray-300"}`}>About Us</Link>
@@ -123,6 +139,52 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
               </button>
             )}
           </div>
+          )}
+        </div>
+      </div>
+
+      {/* Mobile Navigation Dropdown */}
+      <div 
+        className={`md:hidden fixed inset-0 z-40 bg-zinc-950/95 backdrop-blur-xl transition-all duration-300 ease-in-out flex flex-col justify-center items-center ${
+          isMobileMenuOpen ? "opacity-100 pointer-events-auto shadow-2xl" : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <div className="flex flex-col items-center justify-center space-y-8 text-xl font-medium tracking-wide">
+          <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/" ? "text-[#D4A435]" : "text-white"}`}>Home</Link>
+          <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/about" ? "text-[#D4A435]" : "text-white"}`}>About Us</Link>
+          <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/gallery" ? "text-[#D4A435]" : "text-white"}`}>Gallery</Link>
+          <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/events" ? "text-[#D4A435]" : "text-white"}`}>Upcoming Events</Link>
+          
+          {!pathname.startsWith("/admin") && (
+            <div className="pt-8 flex flex-col items-center gap-6">
+              {isAuthenticated ? (
+                <>
+                  <div className="flex items-center space-x-4 pb-4 border-b border-zinc-800">
+                    {user?.avatar ? (
+                      <img src={user.avatar} alt="Avatar" className="w-12 h-12 rounded-full object-cover border border-[#D4A435]" referrerPolicy="no-referrer"/>
+                    ) : (
+                      <div className="w-12 h-12 rounded-full bg-zinc-800 border border-[#D4A435] flex items-center justify-center text-lg font-medium text-white tracking-wider uppercase">
+                        {user?.name?.[0] || user?.email?.[0] || "U"}
+                      </div>
+                    )}
+                    <div>
+                      <p className="text-white text-base">{user?.name || "User"}</p>
+                      <p className="text-zinc-400 text-xs">{user?.email || ""}</p>
+                    </div>
+                  </div>
+                  <Link href="/register" onClick={() => setIsMobileMenuOpen(false)} className="text-zinc-300 hover:text-white transition-colors">Register</Link>
+                  <Link href="/profile" onClick={() => setIsMobileMenuOpen(false)} className="text-zinc-300 hover:text-white transition-colors">Profile</Link>
+                  <button onClick={() => { setIsMobileMenuOpen(false); handleLogout(); }} className="text-red-400 font-medium hover:text-red-300 transition-colors">Logout</button>
+                </>
+              ) : (
+                <button 
+                  onClick={() => { setIsMobileMenuOpen(false); setIsLoginModalOpen(true); }} 
+                  className="mt-4 text-zinc-400 hover:text-black transition-colors uppercase text-sm tracking-widest border border-zinc-700 px-8 py-3 hover:bg-white cursor-pointer"
+                >
+                  Login / Signup
+                </button>
+              )}
+            </div>
           )}
         </div>
       </div>
