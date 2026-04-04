@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function AdminTable({ initialProfiles }: { initialProfiles: any[] }) {
   const [profiles, setProfiles] = useState(initialProfiles);
@@ -151,6 +152,12 @@ export default function AdminTable({ initialProfiles }: { initialProfiles: any[]
               </td>
               <td className="px-6 py-4 text-right">
                 <div className="flex items-center justify-end gap-2">
+                  <Link
+                    href={`/admin/profile/${profile.id}`}
+                    className="px-3 py-1.5 bg-zinc-900 border border-[#D4A435]/50 text-[#D4A435] hover:bg-[#D4A435]/10 hover:text-[#e4be68] text-[10px] uppercase tracking-widest transition-colors font-medium whitespace-nowrap"
+                  >
+                    View
+                  </Link>
                   <button
                     onClick={() => handleUpdateStatus(profile.id, 'approved')}
                     disabled={loadingId === profile.id || profile.status === 'approved'}
