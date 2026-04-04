@@ -10,6 +10,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
@@ -35,19 +36,33 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMobileMenuOpen]);
+
   const handleLogout = async () => {
     await fetch('/api/auth/logout', { method: 'POST' });
     router.push('/');
     router.refresh();
   };
 
-  const transparentNavbar = isHome && !isScrolled;
+  // Determine dynamic classes to prevent UI jumping when menu is toggled
+  const isTransparentBackground = (isHome && !isScrolled) || isMobileMenuOpen;
+  const paddingClass = (isHome && !isScrolled) ? "py-6" : "py-4";
+  const backgroundClass = isTransparentBackground ? "bg-transparent" : "bg-black/90 shadow-md backdrop-blur-sm";
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out ${
-        transparentNavbar ? "bg-transparent py-6" : "bg-black/90 py-4 shadow-md backdrop-blur-sm"
-      }`}
+      className={`fixed top-0 left-0 w-full z-50 ${isMobileMenuOpen ? "transition-none" : "transition-all duration-300 ease-in-out"} ${backgroundClass} ${paddingClass}`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center text-white">
         <Link href="/" className="text-base sm:text-lg md:text-2xl font-bold tracking-wider md:tracking-widest uppercase text-white hover:text-[#D4A435] transition-colors relative z-50">
@@ -145,8 +160,8 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
 
       {/* Mobile Navigation Dropdown */}
       <div 
-        className={`md:hidden fixed inset-0 z-40 bg-zinc-950/95 backdrop-blur-xl transition-all duration-300 ease-in-out flex flex-col justify-center items-center ${
-          isMobileMenuOpen ? "opacity-100 pointer-events-auto shadow-2xl" : "opacity-0 pointer-events-none"
+        className={`md:hidden fixed inset-0 z-40 bg-zinc-950/95 backdrop-blur-xl flex flex-col justify-center items-center ${
+          isMobileMenuOpen ? "opacity-100 pointer-events-auto shadow-2xl" : "hidden opacity-0 pointer-events-none"
         }`}
       >
         <div className="flex flex-col items-center justify-center space-y-8 text-xl font-medium tracking-wide">
@@ -156,26 +171,37 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
           <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#D4A435] transition-colors ${pathname === "/events" ? "text-[#D4A435]" : "text-white"}`}>Upcoming Events</Link>
           
           {!pathname.startsWith("/admin") && (
-            <div className="pt-8 flex flex-col items-center gap-6">
+            <div className="pt-8 flex flex-col items-center gap-6 w-full px-6">
               {isAuthenticated ? (
-                <>
-                  <div className="flex items-center space-x-4 pb-4 border-b border-zinc-800">
+                <div className="flex flex-col items-center w-full">
+                  <button 
+                    onClick={() => setIsMobileDropdownOpen(!isMobileDropdownOpen)}
+                    className="flex flex-col items-center justify-center focus:outline-none transition-all hover:scale-105 active:scale-95"
+                    aria-label="Toggle profile menu"
+                  >
                     {user?.avatar ? (
-                      <img src={user.avatar} alt="Avatar" className="w-12 h-12 rounded-full object-cover border border-[#D4A435]" referrerPolicy="no-referrer"/>
+                      <img src={user.avatar} alt="Avatar" className="w-16 h-16 rounded-full object-cover border-2 border-[#D4A435] shadow-[0_0_15px_rgba(212,164,53,0.3)]" referrerPolicy="no-referrer"/>
                     ) : (
-                      <div className="w-12 h-12 rounded-full bg-zinc-800 border border-[#D4A435] flex items-center justify-center text-lg font-medium text-white tracking-wider uppercase">
+                      <div className="w-16 h-16 rounded-full bg-zinc-800 border-2 border-[#D4A435] shadow-[0_0_15px_rgba(212,164,53,0.3)] flex items-center justify-center text-2xl font-medium text-white tracking-wider uppercase">
                         {user?.name?.[0] || user?.email?.[0] || "U"}
                       </div>
                     )}
-                    <div>
-                      <p className="text-white text-base">{user?.name || "User"}</p>
-                      <p className="text-zinc-400 text-xs">{user?.email || ""}</p>
+                  </button>
+                  
+                  {isMobileDropdownOpen ? (
+                    <div className="flex flex-col items-center w-full gap-6 mt-6 animate-in fade-in slide-in-from-top-2 duration-300">
+                      <div className="text-center pb-4 w-3/4 border-b border-zinc-800/50">
+                        <p className="text-white text-lg font-medium">{user?.name || "User"}</p>
+                        <p className="text-[#D4A435] text-xs pt-1">{user?.email || ""}</p>
+                      </div>
+                      <Link href="/register" onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); }} className="text-zinc-300 hover:text-white transition-colors text-lg">Register</Link>
+                      <Link href="/profile" onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); }} className="text-zinc-300 hover:text-white transition-colors text-lg">Profile</Link>
+                      <button onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); handleLogout(); }} className="text-red-400 font-medium hover:text-red-300 transition-colors text-lg">Logout</button>
                     </div>
-                  </div>
-                  <Link href="/register" onClick={() => setIsMobileMenuOpen(false)} className="text-zinc-300 hover:text-white transition-colors">Register</Link>
-                  <Link href="/profile" onClick={() => setIsMobileMenuOpen(false)} className="text-zinc-300 hover:text-white transition-colors">Profile</Link>
-                  <button onClick={() => { setIsMobileMenuOpen(false); handleLogout(); }} className="text-red-400 font-medium hover:text-red-300 transition-colors">Logout</button>
-                </>
+                  ) : (
+                    <p className="text-zinc-500 text-[10px] mt-4 uppercase tracking-[2px] animate-pulse">Tap avatar for options</p>
+                  )}
+                </div>
               ) : (
                 <button 
                   onClick={() => { setIsMobileMenuOpen(false); setIsLoginModalOpen(true); }} 
