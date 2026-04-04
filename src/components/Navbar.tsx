@@ -65,8 +65,15 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
       className={`fixed top-0 left-0 w-full z-50 ${isMobileMenuOpen ? "transition-none" : "transition-all duration-300 ease-in-out"} ${backgroundClass} ${paddingClass}`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center text-white">
-        <Link href="/" className="text-base sm:text-lg md:text-2xl font-bold tracking-wider md:tracking-widest uppercase text-white hover:text-[#D4A435] transition-colors relative z-50">
-          FEM PRODUCTION
+        <Link href="/" className="relative z-50 flex items-center shrink-0">
+          <Image 
+            src="/new-logo.png" 
+            alt="Fem Production Logo" 
+            width={270} 
+            height={90} 
+            className="w-auto h-16 md:h-24 object-contain"
+            priority
+          />
         </Link>
 
         {/* Mobile menu button */}

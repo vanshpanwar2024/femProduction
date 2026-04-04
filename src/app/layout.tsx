@@ -5,6 +5,7 @@ import Navbar from '@/components/Navbar';
 import { cookies } from 'next/headers';
 import { decrypt } from '@/lib/auth';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -33,9 +34,13 @@ export default async function RootLayout({
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
               {/* Brand Section */}
               <div className="space-y-6">
-                <h3 className="text-3xl font-serif italic text-[#D4A435] tracking-wide">
-                  Fem House
-                </h3>
+                <Image 
+                  src="/new-logo.png" 
+                  alt="Fem Production Logo" 
+                  width={240} 
+                  height={80} 
+                  className="w-auto h-20 md:h-28 object-contain"
+                />
                 <p className="text-zinc-400 font-light leading-relaxed max-w-sm">
                   A dynamic platform providing a prestigious stage for artists to showcase their unique talents and compete in their respective fields.
                 </p>
@@ -58,7 +63,7 @@ export default async function RootLayout({
                   </div>
                   <div className="flex items-center gap-4">
                     <span className="text-[#D4A435] text-lg">●</span>
-                    <p className="tracking-widest">+91 xxxxxxxxx</p>
+                    <p className="tracking-widest">+91 9217640015, +91 9211119942</p>
                   </div>
                   <div className="flex items-center gap-4">
                     <span className="text-[#D4A435] text-lg">●</span>
@@ -88,7 +93,6 @@ export default async function RootLayout({
             
             <div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-zinc-500 tracking-widest">
               <p>© {new Date().getFullYear()} FEM PRODUCTION. ALL RIGHTS RESERVED.</p>
-              <p>DESIGNED FOR THE CREATIVE ODYSSEY</p>
             </div>
           </div>
         </footer>
