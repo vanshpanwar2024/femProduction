@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import HeroSlider from '@/components/HeroSlider';
+import FAQItem from '@/components/FAQItem';
 
 const heroImages = [
   "/image-1.png",
@@ -164,36 +165,14 @@ export default function Home() {
             {/* Left Column (First 6) */}
             <div className="flex flex-col border-t border-zinc-900">
               {faqs.slice(0, 6).map((faq, index) => (
-                <div key={index} className="group border-b border-zinc-900 py-6 cursor-default">
-                  <h3 className="font-light tracking-wide text-zinc-300 text-lg md:text-xl transition-colors duration-300 group-hover:text-[#f3c5ae]">
-                    {faq.q}
-                  </h3>
-                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
-                    <div className="overflow-hidden">
-                      <p className="pt-4 text-zinc-400 leading-relaxed font-light text-sm md:text-base pr-8">
-                        {faq.a}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FAQItem key={index} q={faq.q} a={faq.a} />
               ))}
             </div>
 
             {/* Right Column (Last 6) */}
             <div className="flex flex-col border-t border-zinc-900">
               {faqs.slice(6, 12).map((faq, index) => (
-                <div key={index + 6} className="group border-b border-zinc-900 py-6 cursor-default">
-                  <h3 className="font-light tracking-wide text-zinc-300 text-lg md:text-xl transition-colors duration-300 group-hover:text-[#f3c5ae]">
-                    {faq.q}
-                  </h3>
-                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out">
-                    <div className="overflow-hidden">
-                      <p className="pt-4 text-zinc-400 leading-relaxed font-light text-sm md:text-base pr-8">
-                        {faq.a}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+                <FAQItem key={index + 6} q={faq.q} a={faq.a} />
               ))}
             </div>
           </div>
