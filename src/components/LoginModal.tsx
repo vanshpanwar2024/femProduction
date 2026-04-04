@@ -18,14 +18,25 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  // Handle escape key
+  // Handle escape key and body scroll lock
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
-    window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+    
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+      window.addEventListener("keydown", handleKeyDown);
+    } else {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    }
+    
+    return () => {
+      document.body.style.overflow = "unset";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isOpen, onClose]);
 
   // Pick up error parameters bound from OAuth failure redirects
   useEffect(() => {
@@ -78,13 +89,18 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div className="fixed inset-0 z-[100]">
+      {/* Backdrop overlay */}
       <div 
-        className="absolute inset-0 z-[101]" 
+        className="fixed inset-0 bg-black/80 backdrop-blur-sm" 
         onClick={onClose}
       />
       
-      <div className="w-full max-w-md p-8 md:p-12 bg-zinc-950 border border-[#D4A435]/30 space-y-8 shadow-2xl relative z-[102] animate-in fade-in zoom-in-95 duration-200">
+      {/* Scrollable content wrapper */}
+      <div className="fixed inset-0 overflow-y-auto pointer-events-none">
+        <div className="flex min-h-full flex-col items-center justify-center p-4 py-12">
+          
+          <div className="w-full max-w-md p-8 md:p-12 bg-zinc-950 border border-[#D4A435]/30 space-y-8 shadow-2xl relative animate-in fade-in zoom-in-95 duration-200 min-h-[580px] flex flex-col justify-start pointer-events-auto">
         
         {/* Close button */}
         <button 
@@ -213,6 +229,8 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             {isLogin ? "Don't have an account? Sign up" : "Already have an account? Log in"}
           </button>
         </div>
+      </div>
+      </div>
       </div>
     </div>
   );
