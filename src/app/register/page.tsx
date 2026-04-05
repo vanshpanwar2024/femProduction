@@ -9,13 +9,9 @@ export default async function ProfilePage() {
   const session = cookieStore.get("session")?.value;
   const user = session ? await decrypt(session) : null;
 
-  if (!user) {
-    redirect("/login");
-  }
-
   // Fetch existing profile data if it exists
   let existingProfile = null;
-  if (supabase) {
+  if (supabase && user) {
     const { data } = await supabase
       .from('profiles')
       .select('*')
@@ -141,23 +137,31 @@ export default async function ProfilePage() {
         </div>
         
         <div className="flex items-center space-x-4 pb-6 border-b border-[#f3c5ae]/30">
-          {user.avatar ? (
-            <img src={user.avatar} alt="Profile" className="w-14 h-14 rounded-full border border-[#f3c5ae] object-cover p-0.5" />
+          {user ? (
+            user.avatar ? (
+              <img src={user.avatar} alt="Profile" className="w-14 h-14 rounded-full border border-[#f3c5ae] object-cover p-0.5" />
+            ) : (
+              <div className="w-14 h-14 rounded-full bg-black border border-[#f3c5ae] text-[#f3c5ae] flex items-center justify-center text-xl font-medium tracking-widest uppercase">
+                {user.name?.[0] || user.email?.[0] || "U"}
+              </div>
+            )
           ) : (
             <div className="w-14 h-14 rounded-full bg-black border border-[#f3c5ae] text-[#f3c5ae] flex items-center justify-center text-xl font-medium tracking-widest uppercase">
-              {user.name?.[0] || user.email?.[0] || "U"}
+              G
             </div>
           )}
           <div className="space-y-1">
-            <h2 className="text-lg text-white font-medium">{user.name}</h2>
+            <h2 className="text-lg text-white font-medium">{user ? user.name : "Guest Applicant"}</h2>
           </div>
         </div>
 
         <ProfileForm user={user} existingProfile={existingProfile} />
 
-        <div className="pt-6 border-t border-[#f3c5ae]/30 text-center">
-          <p className="text-zinc-500 italic text-[9px] uppercase tracking-[2px]">Connected via {user.provider === "google" ? "Google Authentication" : "Native Account"}.</p>
-        </div>
+        {user && (
+          <div className="pt-6 border-t border-[#f3c5ae]/30 text-center">
+            <p className="text-zinc-500 italic text-[9px] uppercase tracking-[2px]">Connected via {user.provider === "google" ? "Google Authentication" : "Native Account"}.</p>
+          </div>
+        )}
         </div>
       </div>
     </div>

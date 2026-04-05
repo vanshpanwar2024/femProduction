@@ -95,6 +95,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
           <Link href="/about" className={`hover:text-gray-400 transition-colors ${pathname === "/about" ? "text-white" : "text-gray-300"}`}>About Us</Link>
           <Link href="/gallery" className={`hover:text-gray-400 transition-colors ${pathname === "/gallery" ? "text-white" : "text-gray-300"}`}>Gallery</Link>
           <Link href="/events" className={`hover:text-gray-400 transition-colors ${pathname === "/events" ? "text-white" : "text-gray-300"}`}>Upcoming Events</Link>
+          <Link href="/register" className={`hover:text-gray-400 transition-colors ${pathname === "/register" ? "text-white" : "text-gray-300"}`}>Register</Link>
           
           {!pathname.startsWith("/admin") && (
           <div className="pl-6 border-l border-zinc-700 space-x-6 flex items-center">
@@ -176,6 +177,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
           <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/about" ? "text-[#f3c5ae]" : "text-white"}`}>About Us</Link>
           <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/gallery" ? "text-[#f3c5ae]" : "text-white"}`}>Gallery</Link>
           <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/events" ? "text-[#f3c5ae]" : "text-white"}`}>Upcoming Events</Link>
+          <Link href="/register" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/register" ? "text-[#f3c5ae]" : "text-white"}`}>Register</Link>
           
           {!pathname.startsWith("/admin") && (
             <div className="pt-8 flex flex-col items-center gap-6 w-full px-6">

@@ -16,19 +16,21 @@ export async function POST(request: Request) {
     const session = cookieStore.get('session')?.value;
     const user = session ? await decrypt(session) : null;
 
-    if (!user) {
-      return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    }
-
     const body = await request.json();
-    const { name, age, dob, gender, category, bio, socialLink, portfolioLink } = body;
+    const { name, email, age, dob, gender, category, bio, socialLink, portfolioLink } = body;
+
+    const targetEmail = user?.email || email;
+
+    if (!targetEmail) {
+      return NextResponse.json({ error: 'Email is required' }, { status: 400 });
+    }
 
     // Upsert profile data matched on email
     const { data, error } = await supabase
       .from('profiles')
       .upsert({
-        email: user.email,
-        name: name || user.name,
+        email: targetEmail,
+        name: name || user?.name || '',
         age: age ? parseInt(age) : null,
         dob,
         gender,

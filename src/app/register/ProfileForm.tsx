@@ -13,6 +13,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
 
   const [formData, setFormData] = useState({
     name: existingProfile?.name || user?.name || "",
+    email: existingProfile?.email || user?.email || "",
     age: existingProfile?.age || "",
     dob: existingProfile?.dob || "",
     gender: existingProfile?.gender || "",
@@ -86,6 +87,21 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
             onChange={handleChange} 
             required
             disabled={isRegistered}
+            className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
+          />
+        </div>
+
+        {/* Email */}
+        <div className="space-y-2">
+          <label className="text-[10px] pb-1 mb-1 uppercase tracking-[3px] text-[#f3c5ae] block" htmlFor="email">Email Address</label>
+          <input 
+            type="email" 
+            name="email" 
+            id="email" 
+            value={formData.email} 
+            onChange={handleChange} 
+            required
+            disabled={isRegistered || !!user?.email}
             className="w-full bg-zinc-950 border border-zinc-700 px-4 py-3 text-white focus:outline-none focus:border-[#f3c5ae] focus:ring-1 focus:ring-[#f3c5ae]/50 transition-colors disabled:bg-zinc-900 disabled:text-zinc-500"
           />
         </div>
