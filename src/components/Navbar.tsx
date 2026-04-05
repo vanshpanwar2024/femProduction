@@ -61,10 +61,11 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
   const backgroundClass = isTransparentBackground ? "bg-transparent" : "bg-black/90 shadow-md backdrop-blur-sm";
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 ${isMobileMenuOpen ? "transition-none" : "transition-all duration-300 ease-in-out"} ${backgroundClass} ${paddingClass}`}
-    >
-      <div className="container mx-auto px-6 flex justify-between items-center text-white">
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 ${isMobileMenuOpen ? "transition-none" : "transition-all duration-300 ease-in-out"} ${backgroundClass} ${paddingClass}`}
+      >
+        <div className="container mx-auto px-6 flex justify-between items-center text-white">
         <Link href="/" className="relative z-50 flex items-center shrink-0">
           <Image 
             src="/new-logo.png" 
@@ -126,13 +127,6 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
                       <p className="text-xs text-zinc-400 truncate max-w-full">{user?.email || ""}</p>
                     </div>
                     <div className="py-2">
-                      <Link 
-                        href="/register" 
-                        onClick={() => setIsDropdownOpen(false)}
-                        className="block px-4 py-2 text-sm text-zinc-300 hover:bg-zinc-800 hover:text-white transition-colors"
-                      >
-                        Register
-                      </Link>
                       <Link 
                         href="/profile" 
                         onClick={() => setIsDropdownOpen(false)}
@@ -203,7 +197,6 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
                         <p className="text-white text-lg font-medium">{user?.name || "User"}</p>
                         <p className="text-[#f3c5ae] text-xs pt-1">{user?.email || ""}</p>
                       </div>
-                      <Link href="/register" onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); }} className="text-zinc-300 hover:text-white transition-colors text-lg">Register</Link>
                       <Link href="/profile" onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); }} className="text-zinc-300 hover:text-white transition-colors text-lg">Profile</Link>
                       <button onClick={() => { setIsMobileMenuOpen(false); setIsMobileDropdownOpen(false); handleLogout(); }} className="text-red-400 font-medium hover:text-red-300 transition-colors text-lg">Logout</button>
                     </div>
@@ -223,11 +216,12 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
           )}
         </div>
       </div>
+      </nav>
 
       <LoginModal 
         isOpen={isLoginModalOpen} 
         onClose={() => setIsLoginModalOpen(false)} 
       />
-    </nav>
+    </>
   );
 }
