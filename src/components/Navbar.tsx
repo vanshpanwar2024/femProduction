@@ -91,11 +91,11 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-1 justify-end space-x-8 text-sm font-medium tracking-wide items-center">
-          <Link href="/" className={`hover:text-gray-400 transition-colors ${pathname === "/" ? "text-white" : "text-gray-300"}`}>Home</Link>
-          <Link href="/about" className={`hover:text-gray-400 transition-colors ${pathname === "/about" ? "text-white" : "text-gray-300"}`}>About Us</Link>
-          <Link href="/gallery" className={`hover:text-gray-400 transition-colors ${pathname === "/gallery" ? "text-white" : "text-gray-300"}`}>Gallery</Link>
-          <Link href="/events" className={`hover:text-gray-400 transition-colors ${pathname === "/events" ? "text-white" : "text-gray-300"}`}>Upcoming Events</Link>
-          <Link href="/register" className={`hover:text-gray-400 transition-colors ${pathname === "/register" ? "text-white" : "text-gray-300"}`}>Register</Link>
+          <Link href="/" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Home</Link>
+          <Link href="/about" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/about" ? "text-[#f3c5ae]" : "text-gray-300"}`}>About Us</Link>
+          <Link href="/gallery" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/gallery" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Gallery</Link>
+          <Link href="/events" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/events" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Upcoming Events</Link>
+          <Link href="/register" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/register" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Register</Link>
           
           {!pathname.startsWith("/admin") && (
           <div className="pl-6 border-l border-zinc-700 space-x-6 flex items-center">
