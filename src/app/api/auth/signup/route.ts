@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { encrypt } from '@/lib/auth';
 import { cookies } from 'next/headers';
+import { supabase } from '@/lib/supabase';
 
 export async function POST(request: Request) {
   try {
@@ -20,10 +21,33 @@ export async function POST(request: Request) {
       );
     }
     
-    // Create a mock user object
+    if (!supabase) {
+      return NextResponse.json(
+        { success: false, error: 'Supabase client is not configured properly.' },
+        { status: 500 }
+      );
+    }
+
+    // Register user in Supabase
+    const { data: authData, error: authError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { name },
+      },
+    });
+
+    if (authError) {
+      return NextResponse.json(
+        { success: false, error: authError.message },
+        { status: 400 }
+      );
+    }
+
+    // Create the session payload from the real verified user
     const user = { 
-      id: Date.now(), 
-      email, 
+      id: authData.user?.id || Date.now(), 
+      email: authData.user?.email || email, 
       name, 
       role: 'user' 
     };

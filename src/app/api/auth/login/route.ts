@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { encrypt } from '@/lib/auth';
 import { cookies } from 'next/headers';
+import { supabase } from '@/lib/supabase';
 
 export async function POST(request: Request) {
   try {
@@ -13,19 +14,31 @@ export async function POST(request: Request) {
       );
     }
 
-    // Mock authentication: allow any valid request with password >= 6 length to succeed
-    if (password.length < 6) {
+    if (!supabase) {
       return NextResponse.json(
-        { success: false, error: 'Invalid credentials. Password must be at least 6 characters.' },
+        { success: false, error: 'Supabase client is not configured properly.' },
+        { status: 500 }
+      );
+    }
+
+    // Authenticate against Supabase Database
+    const { data: authData, error: authError } = await supabase.auth.signInWithPassword({
+      email,
+      password,
+    });
+
+    if (authError) {
+      return NextResponse.json(
+        { success: false, error: authError.message || 'Invalid credentials.' },
         { status: 401 }
       );
     }
     
-    // Create a mock user object based on the email provided
+    // Create the session payload from the real verified user
     const user = { 
-      id: Date.now(), 
-      email, 
-      name: email.split('@')[0], 
+      id: authData.user.id, 
+      email: authData.user.email, 
+      name: authData.user.user_metadata?.name || email.split('@')[0], 
       role: 'user' 
     };
     

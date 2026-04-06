@@ -5,28 +5,36 @@ import { cookies } from 'next/headers';
 export async function GET(request: Request) {
   const url = new URL(request.url);
   const code = url.searchParams.get('code');
+  // Construct redirect URI using environment variable, forwarded headers, or request url
+  let origin = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!origin) {
+    const forwardedHost = request.headers.get('x-forwarded-host');
+    const forwardedProto = request.headers.get('x-forwarded-proto') || 'https';
+    if (forwardedHost) {
+      origin = `${forwardedProto}://${forwardedHost}`;
+    } else {
+      origin = new URL(request.url).origin;
+    }
+  }
+
   const errorParam = url.searchParams.get('error');
 
   if (errorParam) {
-    return NextResponse.redirect(new URL('/?error=Google login failed', request.url));
+    return NextResponse.redirect(new URL('/?error=Google login failed', origin));
   }
 
   if (!code) {
-    return NextResponse.redirect(new URL('/?error=No code provided', request.url));
+    return NextResponse.redirect(new URL('/?error=No code provided', origin));
   }
 
   const clientId = process.env.GOOGLE_CLIENT_ID;
   const clientSecret = process.env.GOOGLE_CLIENT_SECRET;
 
   if (!clientId || !clientSecret) {
-    return NextResponse.redirect(new URL('/?error=Google OAuth is not configured securely', request.url));
+    return NextResponse.redirect(new URL('/?error=Google OAuth is not configured securely', origin));
   }
 
-  // Construct redirect URI seamlessly without needing env for the host
-  const isDev = process.env.NODE_ENV === 'development';
-  const redirectUri = isDev 
-    ? 'http://localhost:3000/api/auth/google/callback'
-    : `https://${request.headers.get('host')}/api/auth/google/callback`;
+  const redirectUri = `${origin}/api/auth/google/callback`;
 
   try {
     // 1. Exchange authorization code for access token
@@ -48,7 +56,7 @@ export async function GET(request: Request) {
 
     if (!tokenResponse.ok) {
       console.error('Google token error:', tokenData);
-      return NextResponse.redirect(new URL('/?error=Failed to exchange token', request.url));
+      return NextResponse.redirect(new URL('/?error=Failed to exchange token', origin));
     }
 
     // 2. Fetch user profile from Google using the access token
@@ -62,7 +70,7 @@ export async function GET(request: Request) {
 
     if (!userResponse.ok) {
       console.error('Google user data error:', userData);
-      return NextResponse.redirect(new URL('/?error=Failed to fetch Google profile', request.url));
+      return NextResponse.redirect(new URL('/?error=Failed to fetch Google profile', origin));
     }
 
     // 3. Transform Google User data to our auth platform representation
@@ -89,9 +97,9 @@ export async function GET(request: Request) {
     });
 
     // 6. Redirect to home successfully
-    return NextResponse.redirect(new URL('/', request.url));
+    return NextResponse.redirect(new URL('/', origin));
   } catch (error) {
     console.error('OAuth Callback Error:', error);
-    return NextResponse.redirect(new URL('/?error=Internal server error during Google OAuth setup', request.url));
+    return NextResponse.redirect(new URL('/?error=Internal server error during Google OAuth setup', origin));
   }
 }

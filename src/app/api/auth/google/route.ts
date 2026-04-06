@@ -10,12 +10,18 @@ export async function GET(request: Request) {
     );
   }
 
-  // Automatically determine the protocol and host dynamically, or use env variable
-  // Forcing hardcoded localhost for local development to avoid 127.0.0.1 / localhost mismatches
-  const isDev = process.env.NODE_ENV === 'development';
-  const redirectUri = isDev 
-    ? 'http://localhost:3000/api/auth/google/callback'
-    : `https://${request.headers.get('host')}/api/auth/google/callback`;
+  // Use NEXT_PUBLIC_SITE_URL if defined, fallback to forwarded headers, then request URL
+  let origin = process.env.NEXT_PUBLIC_SITE_URL;
+  if (!origin) {
+    const forwardedHost = request.headers.get('x-forwarded-host');
+    const forwardedProto = request.headers.get('x-forwarded-proto') || 'https';
+    if (forwardedHost) {
+      origin = `${forwardedProto}://${forwardedHost}`;
+    } else {
+      origin = new URL(request.url).origin;
+    }
+  }
+  const redirectUri = `${origin}/api/auth/google/callback`;
 
   // Define Google OAuth 2.0 endpoint
   const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
