@@ -11,9 +11,11 @@ export async function GET(request: Request) {
   }
 
   // Automatically determine the protocol and host dynamically, or use env variable
-  const host = request.headers.get('host') || 'localhost:3000';
-  const protocol = host.includes('localhost') ? 'http' : 'https';
-  const redirectUri = `${protocol}://${host}/api/auth/google/callback`;
+  // Forcing hardcoded localhost for local development to avoid 127.0.0.1 / localhost mismatches
+  const isDev = process.env.NODE_ENV === 'development';
+  const redirectUri = isDev 
+    ? 'http://localhost:3000/api/auth/google/callback'
+    : `https://${request.headers.get('host')}/api/auth/google/callback`;
 
   // Define Google OAuth 2.0 endpoint
   const authUrl = new URL('https://accounts.google.com/o/oauth2/v2/auth');
