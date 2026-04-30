@@ -106,7 +106,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-black pt-32 pb-24 px-6 relative z-10 overflow-hidden">
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <span className="text-[15vw] md:text-[12vw] lg:text-[10vw] font-serif text-white/[0.05] tracking-[0.2em] uppercase whitespace-nowrap select-none">
-          FEM HOUSE PVT LTD
+          FEM HOUSE
         </span>
       </div>
 
