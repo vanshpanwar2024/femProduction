@@ -71,7 +71,7 @@ export default function AboutPage() {
           <section className="space-y-4 pt-8">
             <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide uppercase">History:</h2>
             <p>
-              Founded in 2019 by <strong className="text-white font-medium">Vikas and Manoj Sagwan</strong>, Fem house Production Pvt Ltd has emerged as a pioneer in pageantry and entertainment.
+              Founded in 2019 by <strong className="text-white font-medium">Vikas, Manoj Sagwan, and Vivek Panwar</strong> as cofounders, with <strong className="text-white font-medium">Pankaj Kumar</strong> as project coordinator, Fem house Production Pvt Ltd has emerged as a pioneer in pageantry and entertainment.
             </p>
             <p>
               With a mission to inspire, empower, and transform lives, Fem House continues to be a trusted leader — creating platforms, nurturing talent, and raising the standards of beauty pageants and fashion and Dance events in India.

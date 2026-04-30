@@ -94,6 +94,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
         <div className="hidden md:flex flex-1 justify-end space-x-8 text-sm font-medium tracking-wide items-center">
           <Link href="/" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Home</Link>
           <Link href="/about" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/about" ? "text-[#f3c5ae]" : "text-gray-300"}`}>About Us</Link>
+          <Link href="/services" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/services" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Services</Link>
           <Link href="/gallery" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/gallery" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Gallery</Link>
           <Link href="/events" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/events" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Upcoming Events</Link>
           <Link href="/register" className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/register" ? "text-[#f3c5ae]" : "text-gray-300"}`}>Register</Link>
@@ -169,6 +170,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
         <div className="flex flex-col items-center justify-center space-y-8 text-xl font-medium tracking-wide">
           <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/" ? "text-[#f3c5ae]" : "text-white"}`}>Home</Link>
           <Link href="/about" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/about" ? "text-[#f3c5ae]" : "text-white"}`}>About Us</Link>
+          <Link href="/services" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/services" ? "text-[#f3c5ae]" : "text-white"}`}>Services</Link>
           <Link href="/gallery" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/gallery" ? "text-[#f3c5ae]" : "text-white"}`}>Gallery</Link>
           <Link href="/events" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/events" ? "text-[#f3c5ae]" : "text-white"}`}>Upcoming Events</Link>
           <Link href="/register" onClick={() => setIsMobileMenuOpen(false)} className={`hover:text-[#f3c5ae] transition-colors ${pathname === "/register" ? "text-[#f3c5ae]" : "text-white"}`}>Register</Link>

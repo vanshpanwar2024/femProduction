@@ -58,7 +58,7 @@ export default async function RootLayout({
                       <strong className="text-white font-medium block mb-1">Head Office</strong>
                       613A, Tower-C,<br />
                       KLJ Noida One, Sector 62,<br />
-                      Noida
+                      Noida - 201309, Uttar Pradesh
                     </p>
                   </div>
                   <div className="flex items-center gap-4">

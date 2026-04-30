@@ -8,6 +8,7 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
   const [isLoading, setIsLoading] = useState(false);
   const [successMsg, setSuccessMsg] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [acceptedLegalTerms, setAcceptedLegalTerms] = useState(false);
 
   const isRegistered = !!existingProfile;
 
@@ -31,6 +32,11 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (isRegistered) return;
+
+    if (!acceptedLegalTerms) {
+      setErrorMsg("Please accept the legal terms before completing registration.");
+      return;
+    }
 
     setIsLoading(true);
     setSuccessMsg("");
@@ -223,10 +229,25 @@ export default function ProfileForm({ user, existingProfile }: { user: any, exis
         ></textarea>
       </div>
 
+      <div className={`flex items-start gap-3 ${isRegistered ? "opacity-60 pointer-events-none" : ""}`}>
+        <input
+          type="checkbox"
+          id="legalTerms"
+          checked={acceptedLegalTerms}
+          onChange={(e) => setAcceptedLegalTerms(e.target.checked)}
+          required
+          disabled={isRegistered}
+          className="mt-1 h-4 w-4 accent-[#f3c5ae]"
+        />
+        <label htmlFor="legalTerms" className="text-[11px] md:text-xs leading-relaxed text-zinc-300 cursor-pointer">
+          I accept the legal terms and confirm that the information I provide is accurate.
+        </label>
+      </div>
+
       <div className="pt-4">
         <button
           type="submit"
-          disabled={isRegistered || isLoading}
+          disabled={isRegistered || isLoading || !acceptedLegalTerms}
           className={`w-full md:w-auto px-8 py-4 uppercase tracking-widest text-sm font-medium transition-colors ${
             isRegistered 
               ? "bg-zinc-800 text-zinc-500 cursor-not-allowed" 
