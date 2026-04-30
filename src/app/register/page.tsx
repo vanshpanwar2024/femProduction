@@ -40,7 +40,7 @@ export default async function ProfilePage() {
             <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Dancers</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Elevate Your Dance Skills</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
-              At Fem House, we provide a dedicated platform for dancers to showcase their artistry. Join our vibrant community of dancers and immerse yourself in an environment that celebrates your passion. Compete, learn, and grow with constructive feedback and mentorship from experienced judges.
+              At Fem House Pvt Ltd, we provide a dedicated platform for dancers to showcase their artistry. Join our vibrant community of dancers and immerse yourself in an environment that celebrates your passion. Compete, learn, and grow with constructive feedback and mentorship from experienced judges.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default async function ProfilePage() {
             <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Actors</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Unleash Your Acting Potential</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
-              For aspiring actors, Fem House is your stage to shine. Explore your acting talents, audition in front of seasoned judges, and receive valuable feedback to refine your craft. We believe in nurturing your potential through mentorship and training, both online and offline.
+              For aspiring actors, Fem House Pvt Ltd is your stage to shine. Explore your acting talents, audition in front of seasoned judges, and receive valuable feedback to refine your craft. We believe in nurturing your potential through mentorship and training, both online and offline.
             </p>
           </div>
 
@@ -56,7 +56,7 @@ export default async function ProfilePage() {
             <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Singers</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Harmonize Your Voice with Excellence</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
-              At Fem House, we recognize the power of the human voice. Singers of all genres and styles are welcomed to participate and showcase their vocal prowess. Compete in a supportive environment, receive expert feedback, and access mentorship to fine-tune your singing skills.
+              At Fem House Pvt Ltd, we recognize the power of the human voice. Singers of all genres and styles are welcomed to participate and showcase their vocal prowess. Compete in a supportive environment, receive expert feedback, and access mentorship to fine-tune your singing skills.
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export default async function ProfilePage() {
             <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Comedians</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Spread Laughter and Comedy Brilliance</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
-              Comedy is an art, and at Fem House, we celebrate the brilliance of comedians. Join our community of funny and witty minds, perform your best routines, and compete for recognition. Our experienced judges provide valuable insights to enhance your comedic timing and delivery.
+              Comedy is an art, and at Fem House Pvt Ltd, we celebrate the brilliance of comedians. Join our community of funny and witty minds, perform your best routines, and compete for recognition. Our experienced judges provide valuable insights to enhance your comedic timing and delivery.
             </p>
           </div>
 
@@ -72,7 +72,7 @@ export default async function ProfilePage() {
             <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Rappers</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Rap with Passion and Precision</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
-              Rap is a form of lyrical artistry, and at Fem House, we provide a stage for passionate rappers to showcase their skills. Participate in rap battles, impress judges with your lyrical prowess, and receive constructive feedback to elevate your craft.
+              Rap is a form of lyrical artistry, and at Fem House Pvt Ltd, we provide a stage for passionate rappers to showcase their skills. Participate in rap battles, impress judges with your lyrical prowess, and receive constructive feedback to elevate your craft.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default async function ProfilePage() {
             <h3 className="text-[#f3c5ae] text-[10px] uppercase tracking-[3px]">Models</h3>
             <h4 className="text-white text-sm md:text-base font-light tracking-wide">Strut Your Style on the Runway</h4>
             <p className="text-zinc-400 text-[10px] md:text-[11px] leading-relaxed">
-               For aspiring models, Fem House is the runway to strut your style and grace. Showcase your modeling talent, compete with confidence, and receive expert guidance to enhance your modeling skills. Join us and make your presence felt on the glamorous stage.
+               For aspiring models, Fem House Pvt Ltd is the runway to strut your style and grace. Showcase your modeling talent, compete with confidence, and receive expert guidance to enhance your modeling skills. Join us and make your presence felt on the glamorous stage.
             </p>
           </div>
           
@@ -114,7 +114,7 @@ export default async function ProfilePage() {
           {existingProfile?.status === 'approved' ? (
             <div className="mt-4 p-4 bg-green-500/10 border border-green-500/50">
               <p className="text-green-400 text-[13px] md:text-sm tracking-wide font-medium leading-relaxed">
-                Your profile has been approved! We are excited to welcome you to FEM PRODUCTION. Our team will be in touch with you shortly.
+                Your profile has been approved! We are excited to welcome you to FEM HOUSE PVT LTD. Our team will be in touch with you shortly.
               </p>
             </div>
           ) : existingProfile?.status === 'declined' ? (

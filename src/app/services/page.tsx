@@ -2,7 +2,7 @@ const coreServices = [
   {
     title: "Film & Series Production",
     description:
-      "From script to screen, Fem Production delivers full-scale production for films, web series, documentaries, and branded storytelling with cinematic precision.",
+      "From script to screen, Fem House Pvt Ltd delivers full-scale production for films, web series, documentaries, and branded storytelling with cinematic precision.",
     items: [
       "Feature Films & Short Films",
       "Web Series & Episodic Content",
@@ -46,7 +46,7 @@ const coreServices = [
   {
     title: "Experiential & Platform Services",
     description:
-      "Fem Production creates memorable experiences and digital pathways that help brands, creators, and businesses reach people in powerful ways.",
+      "Fem House Pvt Ltd creates memorable experiences and digital pathways that help brands, creators, and businesses reach people in powerful ways.",
     items: [
       "Event Production & Experiential Marketing",
       "OTT & Digital Distribution",
@@ -106,7 +106,7 @@ export default function ServicesPage() {
     <div className="min-h-screen bg-black pt-32 pb-24 px-6 relative z-10 overflow-hidden">
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <span className="text-[15vw] md:text-[12vw] lg:text-[10vw] font-serif text-white/[0.05] tracking-[0.2em] uppercase whitespace-nowrap select-none">
-          FEM PRODUCTION
+          FEM HOUSE PVT LTD
         </span>
       </div>
 
@@ -119,7 +119,7 @@ export default function ServicesPage() {
             End-to-End Media, Entertainment &amp; <span className="font-serif italic text-[#f3c5ae]">Brand Solutions</span>
           </h1>
           <p className="text-zinc-400 leading-relaxed text-lg md:text-xl font-light max-w-4xl mx-auto">
-            At Fem Production, we offer a robust portfolio of integrated services designed to empower brands, creators, businesses, and agencies in today&apos;s content-driven, digital-first marketplace. We combine creativity, strategy, technology, and execution under one unified vision.
+            At Fem House Pvt Ltd, we offer a robust portfolio of integrated services designed to empower brands, creators, businesses, and agencies in today&apos;s content-driven, digital-first marketplace. We combine creativity, strategy, technology, and execution under one unified vision.
           </p>
           <div className="w-24 h-[1px] bg-[#f3c5ae] opacity-60 mx-auto"></div>
         </section>
@@ -196,7 +196,7 @@ export default function ServicesPage() {
                 Advertising &amp; <span className="font-serif italic text-[#f3c5ae]">Commercial Production</span>
               </h2>
               <p className="text-zinc-400 leading-relaxed text-base md:text-lg font-light max-w-3xl">
-                From high-concept ad films to corporate campaigns and branded content, Fem Production creates visual narratives that resonate across platforms and deliver measurable impact.
+                From high-concept ad films to corporate campaigns and branded content, Fem House Pvt Ltd creates visual narratives that resonate across platforms and deliver measurable impact.
               </p>
             </div>
 

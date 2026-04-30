@@ -6,7 +6,7 @@ export default function PrivacyPolicy() {
       {/* Fixed Background Watermark */}
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <span className="text-[15vw] md:text-[12vw] lg:text-[10vw] font-serif text-white/[0.05] tracking-[0.2em] uppercase whitespace-nowrap select-none">
-          FEM HOUSE
+          FEM HOUSE PVT LTD
         </span>
       </div>
 
@@ -30,7 +30,7 @@ export default function PrivacyPolicy() {
           <section className="space-y-4">
             <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">1. Introduction</h2>
             <p>
-              Welcome to <span className="text-[#f3c5ae]">Fem House</span>. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website https://femproduction.in/ and use our services.
+              Welcome to <span className="text-[#f3c5ae]">Fem House Pvt Ltd</span>. We are committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner. This Privacy Policy explains how we collect, use, disclose, and protect your information when you visit our website https://femproduction.in/ and use our services.
             </p>
           </section>
 

@@ -4,7 +4,7 @@ export default function AboutPage() {
       {/* Fixed Background Watermark */}
       <div className="fixed inset-0 flex items-center justify-center pointer-events-none z-0 overflow-hidden">
         <span className="text-[15vw] md:text-[12vw] lg:text-[10vw] font-serif text-white/[0.05] tracking-[0.2em] uppercase whitespace-nowrap select-none">
-          FEM HOUSE
+          FEM HOUSE PVT LTD
         </span>
       </div>
 
@@ -23,24 +23,24 @@ export default function AboutPage() {
         <div className="space-y-16 text-zinc-300 font-light leading-relaxed text-lg pb-16">
           
           <section className="space-y-4">
-            <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide">Discover Fem House</h2>
+            <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide">Discover Fem House Pvt Ltd</h2>
             <p>
-              <strong className="text-white font-medium">Fem House</strong> is more than just a platform; it&apos;s a vibrant and passionate community dedicated to nurturing and celebrating artistic talent in all its diverse forms. With a commitment to providing aspiring artists the opportunity to shine on a prestigious stage, Fem House has become a beacon for talent from various fields including dance, acting, singing, comedy, rap, and modeling. Our mission is clear: to empower individuals, regardless of age or background, to showcase their unique abilities, receive constructive feedback from experienced judges, and access comprehensive mentorship and training programs. We believe that within every artist lies immense potential, and Fem house is here to help them unlock it. Join us on this thrilling journey, where talent meets recognition, and dreams take flight.
+              <strong className="text-white font-medium">Fem House Pvt Ltd </strong> is more than just a platform; it&apos;s a vibrant and passionate community dedicated to nurturing and celebrating artistic talent in all its diverse forms. With a commitment to providing aspiring artists the opportunity to shine on a prestigious stage, Fem House Pvt Ltd has become a beacon for talent from various fields including dance, acting, singing, comedy, rap, and modeling. Our mission is clear: to empower individuals, regardless of age or background, to showcase their unique abilities, receive constructive feedback from experienced judges, and access comprehensive mentorship and training programs. We believe that within every artist lies immense potential, and Fem House Pvt Ltd is here to help them unlock it. Join us on this thrilling journey, where talent meets recognition, and dreams take flight.
             </p>
           </section>
 
           <section className="space-y-4">
             <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide">Our Vision and Mission</h2>
-            <h3 className="text-xl text-white font-medium tracking-wide pb-2">Empowering Artistic Excellence: Fem House</h3>
+            <h3 className="text-xl text-white font-medium tracking-wide pb-2">Empowering Artistic Excellence: Fem House Pvt Ltd</h3>
             <p>
-              At <strong className="text-white font-medium">Fem House</strong>, our unwavering commitment lies in the nurturing and celebration of artistic talent. We take pride in offering a prestigious platform that welcomes individuals of all ages and diverse backgrounds to showcase their exceptional abilities. Our primary mission is to actively foster growth, promote recognition, and cultivate artistic excellence. This is achieved through our meticulously organized competitions, constructive feedback from seasoned experts, and comprehensive mentorship and training programs, ensuring that every participant can thrive and reach their full potential in the world of arts.
+              At <strong className="text-white font-medium">Fem House Pvt Ltd</strong>, our unwavering commitment lies in the nurturing and celebration of artistic talent. We take pride in offering a prestigious platform that welcomes individuals of all ages and diverse backgrounds to showcase their exceptional abilities. Our primary mission is to actively foster growth, promote recognition, and cultivate artistic excellence. This is achieved through our meticulously organized competitions, constructive feedback from seasoned experts, and comprehensive mentorship and training programs, ensuring that every participant can thrive and reach their full potential in the world of arts.
             </p>
           </section>
 
           <section className="space-y-4">
-            <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide">Distinguished Awards, Recognitions, and Milestones at Fem House</h2>
+            <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide">Distinguished Awards, Recognitions, and Milestones at Fem House Pvt Ltd</h2>
             <p>
-              Fem House has consistently celebrated excellence and creativity within the artistic community. Over the years, our platform has witnessed remarkable talents emerging and flourishing. We take immense pride in acknowledging and rewarding outstanding achievements in various domains, including dance, singing, comedy, acting, modeling, and rap. Our winners have not only received prestigious trophies but have also been honored with cash prizes and scholarships, enabling them to further their artistic journeys. Fem house has also been recognized for its commitment to fostering talent and promoting inclusivity within the arts.
+              Fem House Pvt Ltd has consistently celebrated excellence and creativity within the artistic community. Over the years, our platform has witnessed remarkable talents emerging and flourishing. We take immense pride in acknowledging and rewarding outstanding achievements in various domains, including dance, singing, comedy, acting, modeling, and rap. Our winners have not only received prestigious trophies but have also been honored with cash prizes and scholarships, enabling them to further their artistic journeys. Fem House Pvt Ltd has also been recognized for its commitment to fostering talent and promoting inclusivity within the arts.
             </p>
             <p className="pt-4">
               We specialize in hosting national and international events that empower individuals to showcase their talent, confidence, and personality on prestigious platforms.
@@ -71,10 +71,10 @@ export default function AboutPage() {
           <section className="space-y-4 pt-8">
             <h2 className="text-3xl text-[#f3c5ae] font-medium tracking-wide uppercase">History:</h2>
             <p>
-              Founded in 2019 by <strong className="text-white font-medium">Vikas, Manoj Sagwan, and Vivek Panwar</strong> as cofounders, with <strong className="text-white font-medium">Pankaj Kumar</strong> as project coordinator, Fem house Production Pvt Ltd has emerged as a pioneer in pageantry and entertainment.
+              Founded in 2019 by <strong className="text-white font-medium">Vikas, Manoj Sagwan and Vivek Panwar</strong> as co-founders, with <strong className="text-white font-medium">Pankaj Kumar</strong> as project coordinator, Fem House Pvt Ltd has emerged as a pioneer in pageantry and entertainment.
             </p>
             <p>
-              With a mission to inspire, empower, and transform lives, Fem House continues to be a trusted leader — creating platforms, nurturing talent, and raising the standards of beauty pageants and fashion and Dance events in India.
+              With a mission to inspire, empower, and transform lives, Fem House Pvt Ltd continues to be a trusted leader — creating platforms, nurturing talent, and raising the standards of beauty pageants and fashion and Dance events in India.
             </p>
             <p className="text-[#f3c5ae] font-serif italic text-xl pt-4">
               Join us on this extraordinary journey of empowerment, elegance, and opportunity.
@@ -97,7 +97,7 @@ export default function AboutPage() {
             <div className="space-y-3">
               <h2 className="text-2xl text-[#f3c5ae] font-medium tracking-wide">Our Commitment:</h2>
               <p className="text-sm">
-                We are committed to fostering a diverse and vibrant community of artists, where passion and creativity are celebrated. At Fem House, talent meets opportunity, and dreams are transformed into reality. Join us in this exciting journey of artistic exploration and achievement.
+                We are committed to fostering a diverse and vibrant community of artists, where passion and creativity are celebrated. At Fem House Pvt Ltd, talent meets opportunity, and dreams are transformed into reality. Join us in this exciting journey of artistic exploration and achievement.
               </p>
             </div>
           </div>

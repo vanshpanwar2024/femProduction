@@ -10,7 +10,7 @@ import Image from 'next/image';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'FEM PRODUCTION | Fashion & Events',
+  title: 'FEM HOUSE PVT LTD | Fashion & Events',
   description: 'Aesthetic fashion event planner and showcase.',
 };
 
@@ -36,7 +36,7 @@ export default async function RootLayout({
               <div className="space-y-6">
                 <Image 
                   src="/new-logo.png" 
-                  alt="Fem Production Logo" 
+                  alt="Fem House Pvt Ltd Logo" 
                   width={240} 
                   height={80} 
                   className="w-auto h-20 md:h-28 object-contain"
@@ -92,7 +92,7 @@ export default async function RootLayout({
             </div>
             
             <div className="mt-16 pt-8 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-light text-zinc-500 tracking-widest">
-              <p>© {new Date().getFullYear()} FEM PRODUCTION. ALL RIGHTS RESERVED.</p>
+              <p>© {new Date().getFullYear()} FEM HOUSE PVT LTD. ALL RIGHTS RESERVED.</p>
             </div>
           </div>
         </footer>

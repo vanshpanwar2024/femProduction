@@ -69,7 +69,7 @@ export default function Navbar({ isAuthenticated, user }: { isAuthenticated?: bo
         <Link href="/" className="relative z-50 flex items-center shrink-0">
           <Image 
             src="/new-logo.png" 
-            alt="Fem Production Logo" 
+            alt="Fem House Pvt Ltd Logo" 
             width={270} 
             height={90} 
             className="w-auto h-16 md:h-24 object-contain"

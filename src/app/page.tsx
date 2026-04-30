@@ -11,40 +11,40 @@ const heroImages = [
 
 const faqs = [
   {
-    q: "What is Fem House ?",
-    a: "Fem House , or Fem House , is a dynamic platform that provides a prestigious stage for artists, including dancers, actors, singers, comedians, rappers, and models, to showcase their unique talents and compete in their respective fields."
+    q: "What is Fem House Pvt Ltd ?",
+    a: "Fem House Pvt Ltd is a dynamic platform that provides a prestigious stage for artists, including dancers, actors, singers, comedians, rappers, and models, to showcase their unique talents and compete in their respective fields."
   },
   {
-    q: "Who can participate in Fem House ?",
-    a: "FEM HOUSE welcomes individuals of all ages and backgrounds who are passionate about their art. There are no age restrictions, making it accessible to everyone with a talent to share."
+    q: "Who can participate in Fem House Pvt Ltd ?",
+    a: "FEM HOUSE PVT LTD welcomes individuals of all ages and backgrounds who are passionate about their art. There are no age restrictions, making it accessible to everyone with a talent to share."
   },
   {
     q: "How does the competition work?",
-    a: "Participants can register on the FEM HOUSE website, audition in front of experienced judges, and compete in various rounds. Winners receive trophies, cash prizes, and scholarships, while all participants benefit from mentorship and training."
+    a: "Participants can register on the FEM HOUSE PVT LTD website, audition in front of experienced judges, and compete in various rounds. Winners receive trophies, cash prizes, and scholarships, while all participants benefit from mentorship and training."
   },
   {
-    q: "Is FEM HOUSE only for winners?",
-    a: "No, FEM HOUSE is for everyone. Even if you don’t win, you can access mentorship, training, and recognition, fostering personal growth and development in your chosen field."
+    q: "Is FEM HOUSE PVT LTD only for winners?",
+    a: "No, FEM HOUSE PVT LTD is for everyone. Even if you don't win, you can access mentorship, training, and recognition, fostering personal growth and development in your chosen field."
   },
   {
-    q: "Can I watch the competitions on FEM HOUSE?",
-    a: "Yes, FEM HOUSE competitions are live-streamed on an OTT platform, allowing a broader audience to enjoy and support the talented participants."
+    q: "Can I watch the competitions on FEM HOUSE PVT LTD?",
+    a: "Yes, FEM HOUSE PVT LTD competitions are live-streamed on an OTT platform, allowing a broader audience to enjoy and support the talented participants."
   },
   {
-    q: "How can I get involved with FEM HOUSE as an audience member or supporter?",
-    a: "You can follow FEM HOUSE on social media and the official website to stay updated on events and performances. Supporting and cheering for your favorite contestants is highly encouraged."
+    q: "How can I get involved with FEM HOUSE PVT LTD as an audience member or supporter?",
+    a: "You can follow FEM HOUSE PVT LTD on social media and the official website to stay updated on events and performances. Supporting and cheering for your favorite contestants is highly encouraged."
   },
   {
-    q: "Can I collaborate with FEM HOUSE for creative projects?",
-    a: "Yes, FEM HOUSE offers collaborative opportunities for brand assets, commissioned projects, and more. Reach out to FEM HOUSE to explore partnership possibilities."
+    q: "Can I collaborate with FEM HOUSE PVT LTD for creative projects?",
+    a: "Yes, FEM HOUSE PVT LTD offers collaborative opportunities for brand assets, commissioned projects, and more. Reach out to FEM HOUSE PVT LTD to explore partnership possibilities."
   },
   {
-    q: "How do I register for FEM HOUSE?",
-    a: "To register, visit the official FEM HOUSE website, fill out the registration form, and submit the registration fee. You will receive a unique registration number for updates and auditions."
+    q: "How do I register for FEM HOUSE PVT LTD?",
+    a: "To register, visit the official FEM HOUSE PVT LTD website, fill out the registration form, and submit the registration fee. You will receive a unique registration number for updates and auditions."
   },
   {
-    q: "Is FEM HOUSE committed to fostering artistic growth?",
-    a: "Absolutely, FEM HOUSE is dedicated to nurturing talent through mentorship, training, and constructive feedback, ensuring that every participant has the opportunity to grow and thrive in their artistic journey."
+    q: "Is FEM HOUSE PVT LTD committed to fostering artistic growth?",
+    a: "Absolutely, FEM HOUSE PVT LTD is dedicated to nurturing talent through mentorship, training, and constructive feedback, ensuring that every participant has the opportunity to grow and thrive in their artistic journey."
   },
   {
     q: "What happens during the audition process?",
@@ -52,11 +52,11 @@ const faqs = [
   },
   {
     q: "Are there opportunities for audience participation or voting in competitions?",
-    a: "FEM HOUSE occasionally includes audience participation or voting in certain competitions, allowing viewers to engage and support their favorite contestants."
+    a: "FEM HOUSE PVT LTD occasionally includes audience participation or voting in certain competitions, allowing viewers to engage and support their favorite contestants."
   },
   {
-    q: "How can I become a judge or mentor at FEM HOUSE?",
-    a: "If you’re interested in becoming a judge or mentor at FEM HOUSE, you can reach out to our team through the official website or contact information provided."
+    q: "How can I become a judge or mentor at FEM HOUSE PVT LTD?",
+    a: "If you're interested in becoming a judge or mentor at FEM HOUSE PVT LTD, you can reach out to our team through the official website or contact information provided."
   }
 ];
 
@@ -77,16 +77,16 @@ export default function Home() {
             </div>
             <h2 className="text-4xl md:text-5xl font-light tracking-wider uppercase text-white leading-tight">
               Welcome to <br />
-              <span className="font-serif italic text-[#f3c5ae]">Fem House</span>
+              <span className="font-serif italic text-[#f3c5ae]">Fem House Pvt Ltd</span>
             </h2>
             <div className="w-24 h-[2px] bg-[#f3c5ae] opacity-80 my-8"></div>
             
             <div className="space-y-6">
               <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
-                <strong className="text-white font-medium">Fem House</strong> is a platform dedicated to showcasing and celebrating diverse talents and arts. Our mission is to provide a stage for individuals to express their creativity and hone their skills in various disciplines, including acting, singing, dancing, modeling, comedy, raps, and more.
+                <strong className="text-white font-medium">Fem House Pvt Ltd</strong> is a platform dedicated to showcasing and celebrating diverse talents and arts. Our mission is to provide a stage for individuals to express their creativity and hone their skills in various disciplines, including acting, singing, dancing, modeling, comedy, raps, and more.
               </p>
               <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
-                Through competitions, online learning resources, and community support, we aim to empower individuals to reach new heights in their artistic journeys. Join us in exploring and nurturing your talents at Fem House.
+                Through competitions, online learning resources, and community support, we aim to empower individuals to reach new heights in their artistic journeys. Join us in exploring and nurturing your talents at Fem House Pvt Ltd.
               </p>
             </div>
             
@@ -111,7 +111,7 @@ export default function Home() {
               Competitions We Offer
             </div>
             <p className="text-zinc-400 leading-relaxed text-2xl md:text-3xl font-light tracking-wide font-serif italic">
-              &quot;Explore a world of opportunities and showcase your prowess in dance, music, acting, and modeling through an array of exhilarating competitions brought to you by Fem House.&quot;
+              &quot;Explore a world of opportunities and showcase your prowess in dance, music, acting, and modeling through an array of exhilarating competitions brought to you by Fem House Pvt Ltd.&quot;
             </p>
           </div>
 
@@ -133,10 +133,10 @@ export default function Home() {
               
               <div className="space-y-6">
                 <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
-                  Before you join <strong className="text-white font-medium">Fem House</strong>, take a moment to reflect on your unique journey. Embrace the boundless possibilities and undiscovered talents within you.
+                  Before you join <strong className="text-white font-medium">Fem House Pvt Ltd</strong>, take a moment to reflect on your unique journey. Embrace the boundless possibilities and undiscovered talents within you.
                 </p>
                 <p className="text-zinc-400 leading-relaxed text-lg font-light tracking-wide">
-                  At Fem House, we&apos;re not just a platform; we&apos;re a canvas for your dreams. After you join us, your journey towards self-discovery and artistic growth begins. Together, we&apos;ll nurture your talents, fuel your passions, and inspire your creativity.
+                  At Fem House Pvt Ltd, we&apos;re not just a platform; we&apos;re a canvas for your dreams. After you join us, your journey towards self-discovery and artistic growth begins. Together, we&apos;ll nurture your talents, fuel your passions, and inspire your creativity.
                 </p>
                 <p className="text-[#f3c5ae] leading-relaxed text-lg font-medium tracking-widest uppercase text-sm pt-4">
                   Welcome to a world where your artistic aspirations become reality.

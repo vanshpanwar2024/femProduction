@@ -30,7 +30,7 @@ export default async function ProfilePage() {
     return (
       <div className="pt-40 pb-20 px-6 min-h-screen text-center flex flex-col items-center justify-center">
         <h1 className="text-3xl font-light tracking-widest uppercase text-white mb-6">Profile Not Found</h1>
-        <p className="text-zinc-500 mb-8 max-w-md text-sm leading-relaxed">You haven't completed your registration yet. Please provide your details to access your FEM PRODUCTION profile.</p>
+        <p className="text-zinc-500 mb-8 max-w-md text-sm leading-relaxed">You haven't completed your registration yet. Please provide your details to access your FEM HOUSE PVT LTD profile.</p>
         <Link href="/register" className="px-8 py-3 bg-[#f3c5ae] text-black text-xs uppercase tracking-[2px] font-medium hover:bg-[#e0a585] transition-colors shadow-[0_0_15px_rgba(212,164,53,0.3)]">
           Complete Registration
         </Link>
